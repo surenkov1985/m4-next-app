@@ -1,0 +1,63 @@
+@import "../variables.scss";
+
+.head__navigation {
+    row-gap: 24px;
+
+    &-list {
+        column-gap: 30px;
+        row-gap: 30px;
+
+        @media (max-width: 991px) {
+            padding: 85px 0;
+            background: #323232;
+        }
+    }
+
+    &-item {
+        @media (max-width: 991px) {
+            width: 75%;
+
+            & a {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+
+    &-link {
+        color: $ButtonColor;
+        font-size: 0.875rem;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: $ButtonColor;
+            transition: all 0.3s;
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-weight: 700;
+
+            &::after {
+                width: 100%;
+            }
+        }
+
+        &.active {
+            text-decoration: none;
+            color: #FFFFFF;
+            cursor: default;
+
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}

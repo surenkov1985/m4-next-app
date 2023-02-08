@@ -1,0 +1,11 @@
+.head {
+    &__navigation {
+        &-logo {
+            width: 207px;
+
+            @media (max-width: 768px) {
+                width: 110px;
+            }
+        }
+    }
+}
