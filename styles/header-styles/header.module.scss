@@ -34,12 +34,12 @@
         }
 
         &-dropdown {
-            background: $ButtonColor;
+            background: none;
             padding: 5px;
             cursor: pointer;
 
             & option {
-                color: #FFFFFF;
+                color: #000000;
 
 
                 &:hover {
