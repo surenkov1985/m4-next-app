@@ -5,6 +5,7 @@ import { MainLayout } from "../components/MainLayout";
 import stylesPromo from "../styles/promo.module.scss";
 import stylesAbout from "../styles/about.module.scss";
 import stylesServices from "../styles/services.module.scss";
+import stylesFeedback from "../styles/feedback.module.scss";
 import { causes } from "../variables/about-causes";
 import Image from "next/image";
 import { calculateSizeAdjustValues } from "next/dist/server/font-utils";
@@ -107,7 +108,8 @@ export default function Index() {
 							return (
 								<div key={service.alt} className={stylesServices["services__item"]} role="link" data-href="#">
 									<Image src={service.image} alt={service.alt} />
-									<div
+									<a
+										href=""
 										className={classNames(
 											stylesServices["services__item-bg"],
 											"d-flex flex-column align-items-center align-items-md-end justify-content-end"
@@ -135,7 +137,7 @@ export default function Index() {
 												{service.price}
 											</p>
 										</div>
-									</div>
+									</a>
 								</div>
 							);
 						})}
@@ -148,15 +150,24 @@ export default function Index() {
 				</div>
 			</section>
 
-			<section className="feedback d-flex justify-content-between">
-				<div className="feedback__container container d-flex flex-column flex-md-row align-items-center justify-content-between">
-					<div className="feedback__content">
-						<h2 className="feedback__title text-white text-uppercase font-weight-bold text-center">Не нашли нужной позиции?</h2>
-						<p className="feedback__text text-white font-weight-light font-weight-light text-center">
+			<section className={classNames(stylesFeedback["feedback"], " d-flex justify-content-between")}>
+				<div
+					className={classNames(
+						stylesFeedback["feedback__container"],
+						"container d-flex flex-column flex-md-row align-items-center justify-content-between"
+					)}
+				>
+					<div className={stylesFeedback["feedback__content"]}>
+						<h2 className={classNames(stylesFeedback["feedback__title"], "text-white text-uppercase font-weight-bold text-center")}>
+							Не нашли нужной позиции?
+						</h2>
+						<p className={classNames(stylesFeedback["feedback__text"], "text-white font-weight-light font-weight-light text-center")}>
 							Мы изготавливаем на заказ. Оставьте заявку и наш менеджер свяжется с Вами!
 						</p>
 					</div>
-					<button className="feedback__btn btn btn-warning rounded-pill text-white text-uppercase">Оставить заявку</button>
+					<button className={classNames(stylesFeedback["feedback__btn"], "btn btn-warning rounded-pill text-white text-uppercase")}>
+						Оставить заявку
+					</button>
 				</div>
 			</section>
 		</MainLayout>
