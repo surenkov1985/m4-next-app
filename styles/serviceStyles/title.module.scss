@@ -1,0 +1,112 @@
+.widescreen {
+    &__title {
+        background: #282828;
+
+        &-icon svg {
+            width: 115px;
+
+            @media screen and (max-width: 768px) {
+                width: 82px;
+            }
+
+            // & svg {
+            //     width: 100%;
+            // }
+        }
+
+        &-icon img {
+            width: 115px;
+
+            @media screen and (max-width: 768px) {
+                width: 82px;
+            }
+
+            // & svg {
+            //     width: 100%;
+            // }
+        }
+
+        &-container {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        & .line {
+            height: 100%;
+            width: 2px;
+            border: 1px solid #FFFFFF;
+            margin: 0 0 0 68px;
+
+            @media screen and (max-width: 550px) {
+                height: 70px;
+                margin-left: 16px;
+            }
+        }
+
+        & .title {
+            font-size: 3.125rem;
+            line-height: 59px;
+            padding: 46px 28px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 2.5rem;
+                line-height: 2.7rem;
+                padding: 20px;
+            }
+
+            @media screen and (max-width: 550px) {
+                font-size: 1.5rem;
+                line-height: 2rem;
+                padding: 20px;
+            }
+        }
+
+        & .description {
+            font-size: 1.125rem;
+            line-height: 35px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 1rem;
+                line-height: 30px;
+            }
+
+            @media screen and (max-width: 550px) {
+                font-size: 0.875rem;
+                line-height: 26px;
+            }
+        }
+    }
+
+    &__banners {
+        & .container {
+            padding: 50px 40px;
+
+            @media (max-width: 768px) {
+                padding: 16px 10px;
+
+            }
+        }
+    }
+
+    &__request {
+        background: #606060;
+
+        & .container {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        &__btn {
+            padding: 10px 38px;
+        }
+    }
+
+    &__slider {
+        background: #282828;
+
+        & .container {
+            padding-top: 55px;
+            padding-bottom: 55px;
+        }
+    }
+}

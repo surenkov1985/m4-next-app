@@ -129,7 +129,7 @@ export const serviceTypes = [
 				text: "Вывески",
 				logo: "",
 				color: "rgba(235, 167, 7, 0.79)",
-				path: "",
+				path: "services/signboards",
 				price: "от 5 000 руб",
 			},
 			{
@@ -157,7 +157,7 @@ export const serviceTypes = [
 				text: "Вывески",
 				logo: "",
 				color: "rgba(235, 167, 7, 0.79)",
-				path: "",
+				path: "services/signboards",
 				price: "от 5 000 руб",
 			},
 			{
@@ -185,7 +185,8 @@ export const serviceTypes = [
 				text: "Вывески",
 				logo: "",
 				color: "rgba(235, 167, 7, 0.79)",
-				path: "",
+				id: "signboards",
+				path: "services/signboards",
 				price: "от 5 000 руб",
 			},
 			{

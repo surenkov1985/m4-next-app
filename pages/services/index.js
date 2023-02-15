@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MainLayout } from "../../components/MainLayout";
 import ServicesList from "../../components/ServicesList";
 import { serviceTypes } from "../../variables/indexServises";
@@ -7,6 +7,7 @@ import { serviceTypes } from "../../variables/indexServises";
 import stylesMenu from "../../styles/content-menu.module.scss";
 import classNames from "classnames";
 import { Collapse, Nav, Navbar, NavbarToggler, NavItem, NavLink } from "reactstrap";
+import { useRouter } from "next/router";
 
 export default function Index() {
 	const [isShow, setIsShow] = useState(false);
@@ -15,6 +16,7 @@ export default function Index() {
 	function showToggle() {
 		setIsShow(!isShow);
 	}
+
 	return (
 		<MainLayout>
 			<div className={classNames(stylesMenu["menu"], "w-100")}>
@@ -58,6 +60,7 @@ export default function Index() {
 									)}
 								>
 									{serviceTypes.map((type) => {
+										const testStr = new RegExp(type.id);
 										return (
 											<NavItem key={type.id} className={classNames(stylesMenu["menu__navigation-item"])}>
 												<NavLink
@@ -86,6 +89,7 @@ export default function Index() {
 								)}
 							>
 								{serviceTypes.map((type) => {
+									const testStr = new RegExp(type.id);
 									return (
 										<NavItem key={type.id} className={classNames(stylesMenu["menu__navigation-item"])} onClick={showToggle}>
 											<NavLink
