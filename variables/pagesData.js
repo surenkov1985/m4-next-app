@@ -5,6 +5,8 @@ import barBoard from "../public/images/services/signboard/bar-board.png";
 import studioBoard from "../public/images/services/signboard/studio-board.png";
 import cafeBoard from "../public/images/services/signboard/cafe-board.png";
 
+import bannerPrintImage from "../public/images/services/widescreen-print/banner-print.png";
+
 export const servicePagesData = [
 	{
 		id: "signboards",
@@ -67,7 +69,7 @@ export const servicePagesData = [
 				},
 			],
 		},
-		termsblock: {
+		termsBlock: {
 			icon: null,
 			description: [
 				{
@@ -81,6 +83,44 @@ export const servicePagesData = [
                             Также мы даем гарантию от 5 лет
                             на несущие конструкции и от 2х лет на светодиодную продукцию.`,
 					],
+					colSize: "col-lg-7",
+				},
+				{
+					title: "Сроки выполнения",
+					text: [
+						`Мы изготавливает рекламные носители в минимальные сроки, которые устанавливаются после изучения проекта.`,
+						`Обычно это составляет от 5 до 10 рабочих дней, в зависимости от сложности и размера проекта.`,
+					],
+					button: "Оставить заявку",
+					colSize: "col-lg-5",
+				},
+			],
+		},
+		bannersBlock: {
+			banners: [
+				{
+					title: "Печать на баннере",
+					color: "36, 0, 65",
+					price: `От 330 руб за кв.м.`,
+					image: bannerPrintImage,
+				},
+				{
+					title: "Печать на баннере",
+					color: "36, 0, 65",
+					price: `От 330 руб за кв.м.`,
+					image: bannerPrintImage,
+				},
+				{
+					title: "Печать на баннере",
+					color: "36, 0, 65",
+					price: `От 330 руб за кв.м.`,
+					image: bannerPrintImage,
+				},
+				{
+					title: "Печать на баннере",
+					color: "36, 0, 65",
+					price: `От 330 руб за кв.м.`,
+					image: bannerPrintImage,
 				},
 			],
 		},

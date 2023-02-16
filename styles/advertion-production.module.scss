@@ -240,4 +240,73 @@
             }
         }
     }
+
+    &__slider {
+        background: #282828;
+
+        &-container {
+            padding-top: 55px;
+            padding-bottom: 55px;
+        }
+    }
+}
+
+.slider {
+
+
+
+    &__title {
+        color: #6D6D6D;
+        font-size: 4.5rem;
+        line-height: 80px;
+
+        @media screen and (max-width:768px) {
+            font-size: 4rem;
+            line-height: 65px;
+        }
+    }
+
+    &__button {
+        cursor: pointer;
+
+        & span {
+            color: #C7C7C7;
+            font-size: 0.875rem;
+        }
+
+        &:hover {
+            & span {
+                color: #6D6D6D;
+            }
+        }
+
+    }
+
+    &__control {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+.servicesSwiper {
+
+    @media screen and (max-width: 768px) {
+        height: 500px;
+    }
+
+    @media screen and (max-width: 550px) {
+        height: 350px;
+    }
+
+}
+
+.swiper-slide {
+
+    @media screen and (max-width: 768px) {
+        height: calc(calc(100% - 30px)/2);
+    }
+
+    @media screen and (max-width: 550px) {
+        height: calc(calc(100% - 7px)/2);
+    }
 }

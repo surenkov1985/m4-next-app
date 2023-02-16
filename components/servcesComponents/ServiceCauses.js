@@ -35,15 +35,17 @@ export default function ServiceCauses({ data }) {
 							{data.cardList.map((column, index) => {
 								return (
 									<div
+									key={index}
 										className={classNames(
 											styles["causes__list-column"],
+											styles["col-12"],
 											"col-12 col-xl-6 d-flex flex-column",
 											index === 0 ? "" : "justify-content-start justify-content-xl-between mr-0 mr-xl-5"
 										)}
 									>
 										{column.cardItems.map((item) => {
 											return (
-												<li className={classNames(styles["causes__item"], "d-flex")}>
+												<li key={item.text} className={classNames(styles["causes__item"], "d-flex")}>
 													<span className={classNames(styles["causes__item-num"], "text-right")}>{item.num}</span>
 													<span className={classNames(styles["causes__item-text"], "text-white")}>{item.text}</span>
 												</li>
