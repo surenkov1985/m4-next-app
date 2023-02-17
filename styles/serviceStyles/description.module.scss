@@ -1,3 +1,5 @@
+@import "../variables.scss";
+
 .signboards {
 
 
@@ -109,6 +111,106 @@
 
             @media (max-width: 768px) {
                 padding: 0px 18px 60px;
+            }
+        }
+
+        &__item {
+            column-gap: 13px;
+
+            @media (max-width: 991px) {
+                border-top: 1px solid $ButtonColor;
+                padding-top: 16px;
+            }
+
+            &-num {
+                color: #6B6B6B;
+                font-size: 96px;
+                font-weight: 900;
+                line-height: 81px;
+
+                @media (max-width: 768px) {
+                    font-size: 90px;
+                }
+
+                @media (max-width: 550px) {
+                    font-size: 80px;
+                }
+            }
+
+            &-text {
+                font-size: 1.25rem;
+                font-weight: 500;
+                letter-spacing: 0.02rem;
+
+                @media (max-width: 768px) {
+                    font-size: 1.125rem;
+                }
+
+                @media (max-width: 550px) {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.causes {
+    &__item {
+
+        @media (max-width: 991px) {
+            border-top: 1px solid #F5F5F5;
+            padding-top: 16px;
+        }
+
+        &-num {
+            background: linear-gradient(216.23deg, #B4B4B4 3.13%, #FFFFFF 100.64%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            line-height: 105px;
+            color: #6B6B6B;
+            font-size: 96px;
+            font-weight: 900;
+
+            @media (max-width: 768px) {
+                line-height: 90px;
+            }
+
+            @media (max-width: 550px) {
+                line-height: 75px;
+            }
+        }
+
+        &-title {
+            font-size: 40px;
+            line-height: 64px;
+            font-weight: 900;
+            color: #797979;
+
+            @media (max-width: 768px) {
+                font-size: 35px;
+            }
+
+            @media (max-width: 550px) {
+                font-size: 20px;
+                line-height: 26px;
+            }
+        }
+
+        &-desc {
+            font-size: 18px;
+            line-height: 32px;
+            color: #373737;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+                line-height: 30px;
+            }
+
+            @media (max-width: 550px) {
+                font-size: 14px;
+                line-height: 26px;
             }
         }
     }

@@ -1,7 +1,50 @@
 @import "../variables.scss";
 
 .terms {
-    background: #FFFFFF;
+
+    &.dark {
+        background: #414141;
+
+        & .terms__text {
+            color: #FFFFFF;
+        }
+
+        & .terms__control-text {
+            color: #FFFFFF;
+        }
+    }
+
+    &.light {
+        background: #FFFFFF;
+    }
+
+    &__icon {
+        width: 274px;
+        height: 274px;
+        background: #373737;
+
+        &-text {
+            font-weight: 600;
+            font-size: 90px;
+            line-height: 45px;
+            color: #6d6d6d;
+
+            @media (max-width: 768px) {
+                font-weight: 500;
+                font-size: 85px;
+                line-height: 47px;
+            }
+
+            @media (max-width: 550px) {
+                font-size: 80px;
+                line-height: 49px;
+            }
+
+            & small {
+                font-size: 45px;
+            }
+        }
+    }
 
     &__container {
         padding-top: 62px;
@@ -75,7 +118,8 @@
 
         &-text {
             font-size: 1.125rem;
-            color: #7A7A7A;
+
+            color: #565656;
             margin-left: 30px;
 
             @media (max-width: 768px) {

@@ -4,6 +4,7 @@ import { MainLayout } from "../../components/MainLayout";
 import ServiceBanners from "../../components/servcesComponents/ServiceBanners";
 import ServiceCauses from "../../components/servcesComponents/ServiceCauses";
 import ServiceDescription from "../../components/servcesComponents/Servicedescription";
+import ServicesRequest from "../../components/servcesComponents/ServicesRequest";
 import ServicesSlider from "../../components/servcesComponents/ServicesSlider";
 import ServiceTerms from "../../components/servcesComponents/ServiceTerms";
 import ServiceTitle from "../../components/servcesComponents/ServiceTitle";
@@ -22,6 +23,7 @@ export default function flyers(props) {
 			{data?.causesBlock && <ServiceCauses data={data.causesBlock} />}
 			{data?.termsBlock && <ServiceTerms data={data.termsBlock} />}
 			{data?.bannersBlock && <ServiceBanners data={data.bannersBlock} />}
+			{data?.requestBlock && <ServicesRequest />}
 			<ServicesSlider />
 		</MainLayout>
 	);
