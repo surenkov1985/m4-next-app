@@ -1,4 +1,3 @@
-
 @import "../variables.scss";
 
 .banners {
@@ -55,19 +54,104 @@
             }
         }
 
-        &:hover {
-            & .banner__image {
-                &::after {
-                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.8));
-                    background: rgba(0, 0, 0, 0.3);
-                }
+        // &:hover {
+        //     & .banner__image {
+        //         &::after {
+        //             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.8));
+        //             background: rgba(0, 0, 0, 0.3);
+        //         }
 
+        //     }
+        // }
+    }
+
+    &__description {
+        padding: 0 95px;
+        margin-top: 65px;
+
+        &-title {
+            font-size: 2rem;
+            line-height: 46px;
+            font-weight: 500;
+            color: #565656;
+            margin-bottom: 50px;
+            width: 75%;
+            letter-spacing: 0.05rem;
+        }
+
+        &-text {
+            font-size: 1.125rem;
+            color: #565656;
+            font-weight: 300;
+            margin-bottom: 50px;
+            width: 90%;
+        }
+
+        &-list {
+            list-style-type: disc;
+            list-style-position: inside;
+            row-gap: 60px;
+        }
+
+        &-item {
+            font-size: 1.125rem;
+            color: #565656;
+
+            &-title {
+                font-size: 1.125rem;
+                font-weight: 500;
+            }
+
+            &-text {
+                font-size: 1.125rem;
+                font-weight: 300;
             }
         }
     }
 }
 
 .banner {
+
+
+    &__row {
+        position: relative;
+
+        &:hover {
+            & .banner__image {
+
+                backdrop-filter: blur(9px);
+
+                &::after {
+                    // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.8));
+                    // background: rgba(0, 0, 0, 0.3);
+                    backdrop-filter: blur(9px);
+                }
+            }
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        backdrop-filter: blur(0px);
+        opacity: 0;
+        padding: 20px 30px;
+        row-gap: 35px;
+
+        &-text {
+            font-size: 1rem;
+            font-weight: 300;
+            color: #FFFFFF;
+        }
+
+        &:hover {
+            opacity: 1;
+            backdrop-filter: blur(9px);
+        }
+    }
 
     &__title {
         font-size: 2.5rem;
@@ -83,7 +167,7 @@
 
     &__price {
         font-size: 1.25rem;
-        width: 80%;
+        width: 70%;
 
         @media (max-width: 1200px) {
             width: 100%;
@@ -116,5 +200,15 @@
             font-size: 0.5rem;
             padding: 0px 20px;
         }
+    }
+}
+
+@keyframes blurBanner {
+    from {
+        backdrop-filter: blur(0px);
+    }
+
+    to {
+        backdrop-filter: blur(9px);
     }
 }

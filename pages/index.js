@@ -8,7 +8,6 @@ import stylesServices from "../styles/services.module.scss";
 import stylesFeedback from "../styles/feedback.module.scss";
 import { causes } from "../variables/about-causes";
 import Image from "next/image";
-import { calculateSizeAdjustValues } from "next/dist/server/font-utils";
 import { indexServices } from "../variables/indexServises";
 import Link from "next/link";
 

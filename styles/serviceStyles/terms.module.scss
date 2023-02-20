@@ -52,14 +52,20 @@
     }
 
     &__row {
-        width: 90%;
-        margin-left: 10px;
+        margin-left: 0;
+        margin-right: 0;
 
-        @media (max-width: 768px) {
-            width: 100%;
-            margin-left: 0;
-            margin-right: 0;
+        &.signboard {
+            width: 90%;
+            margin-left: 10px;
+
+            @media (max-width: 768px) {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
         }
+
     }
 
     &__title {
@@ -95,6 +101,9 @@
     }
 
     &__col {
+        padding-left: 20px;
+        padding-right: 20px;
+
         @media (max-width: 550px) {
             padding-left: 8px;
             padding-right: 8px;
@@ -109,6 +118,33 @@
             @media (max-width: 550px) {
                 width: 116px;
                 height: 152px;
+            }
+        }
+    }
+
+    &__plus {
+
+        &-title {
+            font-size: 50px;
+            line-height: 52px;
+            font-weight: 300;
+            color: #FFFFFF;
+            margin-bottom: 65px;
+        }
+
+        &-list {
+            list-style: disc;
+            color: #FFFFFF;
+            font-size: 1.25rem;
+            line-height: 38px;
+            font-weight: 300;
+
+            &-title {
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: #FFFFFF;
+                line-height: 38px;
+                margin-bottom: 40px;
             }
         }
     }

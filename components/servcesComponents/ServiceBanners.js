@@ -11,16 +11,16 @@ export default function ServiceBanners({ data }) {
 					{data.banners.map((banner, index) => {
 						return (
 							<li key={index} className={classNames(styles["banners__item"], styles["banner"], "col-12 col-lg-6")}>
-								<div className="row mx-0 h-100">
+								<div className={classNames(styles["banner__row"], "row mx-0 h-100")}>
 									<div
 										className={classNames(
 											styles["banner__title-block"],
 											"col-6 px-0 d-flex flex-column align-items-center justify-content-center p-2"
 										)}
-										style={{ background: `rgba(${banner.color}, 0.79)` }}
+										style={{ background: `rgb(${banner.color})` }}
 									>
 										<h3 className={classNames(styles["banner__title"], "text-center w-75 text-white font-weight-light")}>
-											{banner.title}
+											{banner.title}<br/>{banner.subtitle && <small>{banner.subtitle}</small>}
 										</h3>
 										<p className={classNames(styles["banner__price"], "text-white font-weight-light text-center ")}>
 											{banner.price}
@@ -42,110 +42,110 @@ export default function ServiceBanners({ data }) {
 									<div className={classNames(styles["banner__image"], "col-6 px-0")}>
 										<Image className="w-100 h-100" src={banner.image} alt={banner.title} />
 									</div>
+									{banner.description && (
+										<div
+											className={classNames(styles["banner__bg"], "d-flex flex-column")}
+											style={{ background: `rgba(${banner.color}, 0.79)` }}
+										>
+											{banner.description.map((text, index) => {
+												return (
+													<p key={index} className={styles["banner__bg-text"]}>
+														{text}
+													</p>
+												);
+											})}
+										</div>
+									)}
 								</div>
 							</li>
 						);
 					})}
-
-					{/* <li className="col-12 col-lg-6 banners__item banner">
-						<div className="row mx-0">
-							<div
-								className="banner__title-block col-6 px-0 d-flex flex-column align-items-center justify-content-center"
-								style="background: #08415C;"
-							>
-								<h3 className="banner__title text-center w-75 text-white font-weight-light">Печать на плёнке</h3>
-								<p className="banner__price text-white font-weight-light">От 420 руб за кв.м.</p>
-							</div>
-							<div className="banner__image col-6 px-0">
-								<img className="w-100 h-100" src="../assets/images/film-print.png" alt="" />
-							</div>
-						</div>
-					</li>
-					<li className="col-12 col-lg-6 banners__item banner">
-						<div className="row mx-0">
-							<div
-								className="banner__title-block col-6 px-0 d-flex flex-column align-items-center justify-content-center"
-								style="background: #1F1F28;"
-							>
-								<h3 className="banner__title text-center w-75 text-white font-weight-light">Печать на постерной бумаге</h3>
-								<p className="banner__price text-white font-weight-light">От 300 руб за кв.м.</p>
-							</div>
-							<div className="banner__image col-6 px-0">
-								<img className="w-100 h-100" src="../assets/images/poster-print.png" alt="" />
-							</div>
-						</div>
-					</li>
-					<li className="col-12 col-lg-6 banners__item banner">
-						<div className="row mx-0">
-							<div
-								className="banner__title-block col-6 px-0 d-flex flex-column align-items-center justify-content-center"
-								style="background: #592F1D;"
-							>
-								<h3 className="banner__title text-center w-75 text-white font-weight-light">Печать на баннерной сетке</h3>
-								<p className="banner__price text-white font-weight-light">От 430 руб за кв.м.</p>
-							</div>
-							<div className="banner__image col-6 px-0">
-								<img className="w-100 h-100" src="../assets/images/grid-banner-print.png" alt="" />
-							</div>
-						</div>
-					</li>
-					<li className="col-12 col-lg-6 banners__item banner">
-						<div className="row mx-0">
-							<div
-								className="banner__title-block col-6 px-0 d-flex flex-column align-items-center justify-content-center"
-								style="background: rgba(36, 0, 65, 0.79);"
-							>
-								<h3 className="banner__title text-center w-75 text-white font-weight-light">Печать на баннере</h3>
-								<p className="banner__price text-white font-weight-light">От 330 руб за кв.м.</p>
-							</div>
-							<div className="banner__image col-6 px-0">
-								<img className="w-100 h-100" src="../assets/images/banner-print.png" alt="" />
-							</div>
-						</div>
-					</li>
-					<li className="col-12 col-lg-6 banners__item banner">
-						<div className="row mx-0">
-							<div
-								className="banner__title-block col-6 px-0 d-flex flex-column align-items-center justify-content-center"
-								style="background: #08415C;"
-							>
-								<h3 className="banner__title text-center w-75 text-white font-weight-light">Печать на плёнке</h3>
-								<p className="banner__price text-white font-weight-light">От 420 руб за кв.м.</p>
-							</div>
-							<div className="banner__image col-6 px-0">
-								<img className="w-100 h-100" src="../assets/images/film-print.png" alt="" />
-							</div>
-						</div>
-					</li>
-					<li className="col-12 col-lg-6 banners__item banner">
-						<div className="row mx-0">
-							<div
-								className="banner__title-block col-6 px-0 d-flex flex-column align-items-center justify-content-center"
-								style="background: #1F1F28;"
-							>
-								<h3 className="banner__title text-center w-75 text-white font-weight-light">Печать на постерной бумаге</h3>
-								<p className="banner__price text-white font-weight-light">От 300 руб за кв.м.</p>
-							</div>
-							<div className="banner__image col-6 px-0">
-								<img className="w-100 h-100" src="../assets/images/poster-print.png" alt="" />
-							</div>
-						</div>
-					</li>
-					<li className="col-12 col-lg-6 banners__item banner">
-						<div className="row mx-0">
-							<div
-								className="banner__title-block col-6 px-0 d-flex flex-column align-items-center justify-content-center"
-								style="background: #592F1D;"
-							>
-								<h3 className="banner__title text-center w-75 text-white font-weight-light">Печать на баннерной сетке</h3>
-								<p className="banner__price text-white font-weight-light">От 430 руб за кв.м.</p>
-							</div>
-							<div className="banner__image col-6 px-0">
-								<img className="w-100 h-100" src="../assets/images/grid-banner-print.png" alt="" />
-							</div>
-						</div>
-					</li> */}
 				</ul>
+				{data.bannersDescription && (
+					<div className={classNames(styles["banners__description"], "row ml-0")}>
+						{data.bannersDescription.map((item, index) => {
+							return (
+								<div key={index} className={classNames(styles["terms__col"], item.colSize, "col-12 d-flex flex-column")}>
+									{item.icon && <Image src={item.icon} alt={item.alt} />}
+									{item.circle && (
+										<div
+											className={classNames(
+												styles["terms__icon"],
+												"rounded-circle d-flex align-items-center justify-content-center position-relative"
+											)}
+										>
+											<h4 className={classNames(styles["terms__icon-text"], "text-center text-uppercase mb-0")}>
+												пр
+												<br /> и<br /> ме
+												<br />
+												<small className="font-weight-bold text-lowercase">нение</small>
+											</h4>
+											<h
+												className={classNames(styles["terms__icon-text"], "text-center position-absolute")}
+												style={{ right: "14%" }}
+											>
+												?
+											</h>
+										</div>
+									)}
+									{item.title && (
+										<h3
+											className={classNames(
+												styles["banners__description-title"],
+												"font-weight-bold text-uppercase text-center text-md-left"
+											)}
+										>
+											{item.title}
+										</h3>
+									)}
+									{item.text &&
+										item?.text?.map((text, index) => {
+											return (
+												<p
+													key={index}
+													className={classNames(styles["banners__description-text"], "text-center text-md-left mt-0")}
+												>
+													{text}
+												</p>
+											);
+										})}
+									{item.button && (
+										<div
+											className={classNames(
+												styles["terms__control"],
+												"d-flex align-items-center justify-content-center justify-content-md-start"
+											)}
+										>
+											<button
+												className={classNames(styles["terms__btn"], "btn btn-sm text-uppercase rounded-pill text-white ")}
+											>
+												{item.button}
+											</button>
+											{item.controlText && (
+												<p className={classNames(styles["terms__control-text"], "text-center my-0")}>{item.controlText}</p>
+											)}
+										</div>
+									)}
+									{item.list && (
+										<ul className={classNames(styles["banners__description-list"], "d-flex flex-column")}>
+											{item.list.map((listItem, index) => {
+												return (
+													<li key={index} className={classNames(styles["banners__description-item"])}>
+														<span className={classNames(styles["banners__description-item-title"], "text-uppercase")}>
+															{listItem.title}
+														</span>
+														<br />
+														<span className={classNames(styles["banners__description-item-text"])}>{listItem.text}</span>
+													</li>
+												);
+											})}
+										</ul>
+									)}
+								</div>
+							);
+						})}
+					</div>
+				)}
 			</div>
 		</section>
 	);

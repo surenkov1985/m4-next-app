@@ -16,8 +16,14 @@ export default function ServiceTitle({ title, text, icon }) {
 						<div className={styles["line"]}></div>
 						<h1 className={classNames(styles["title"], "text-white font-weight-bold w-75 my-0 text-uppercase")}>{title}</h1>
 					</div>
-					<div className="col-12 col-xl-6 align-items-center d-flex font-weight-normal px-2">
-						<p className={classNames(styles["description"], "text-white my-0")}>{text}</p>
+					<div className="col-12 col-xl-6 d-flex flex-column justify-content-around font-weight-normal px-2">
+						{text?.map((item, index) => {
+							return (
+								<p key={index} className={classNames(styles["description"], "text-white my-0")}>
+									{item}
+								</p>
+							);
+						})}
 					</div>
 				</div>
 			</div>

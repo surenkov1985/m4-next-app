@@ -19,12 +19,12 @@ export default function flyers(props) {
 	return (
 		<MainLayout>
 			<ServiceTitle title={data?.titleBlock.title} text={data?.titleBlock.text} icon={data?.titleBlock.icon} />
+			{data?.bannersBlock && <ServiceBanners data={data.bannersBlock} />}
 			{data?.descriptionBlock && <ServiceDescription data={data?.descriptionBlock} />}
 			{data?.causesBlock && <ServiceCauses data={data.causesBlock} />}
 			{data?.termsBlock && <ServiceTerms data={data.termsBlock} />}
-			{data?.bannersBlock && <ServiceBanners data={data.bannersBlock} />}
 			{data?.requestBlock && <ServicesRequest />}
-			{<ServicesSlider theme={data?.sliderTheme}/>}
+			{<ServicesSlider theme={data?.sliderTheme} />}
 		</MainLayout>
 	);
 }
