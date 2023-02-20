@@ -1,0 +1,33 @@
+.request {
+    background: #606060;
+
+    &__container {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__btn {
+        font-size: 0.68rem;
+        padding: 10px 38px;
+
+        &:focus,
+        &:active {
+            box-shadow: none;
+        }
+    }
+
+    &__text {
+        font-size: 1.125rem;
+        font-weight: 500;
+        padding: 0 32px;
+
+        @media (max-width: 768px) {
+            font-size: 1rem;
+            padding: 0;
+        }
+
+        @media (max-width: 550px) {
+            font-size: 0.875rem;
+        }
+    }
+}
