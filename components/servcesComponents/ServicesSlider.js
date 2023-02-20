@@ -11,13 +11,13 @@ import Link from "next/link";
 
 import SwiperCore, { Grid, Navigation } from "swiper";
 
-export default function ServicesSlider() {
+export default function ServicesSlider({theme}) {
 
 	const navigationPrevRef = useRef(null);
 	const navigationNextRef = useRef(null);
 
 	return (
-		<section className={classNames(styles["advertion-production__slider"], "d-flex justify-content-center")}>
+		<section className={classNames(styles["advertion-production__slider"], styles[theme] , "d-flex justify-content-center")}>
 			<div className={classNames(styles["advertion-production__slider-container"], "container row mx-0 flex-row-reverse flex-lg-row")}>
 				<Swiper
 					navigation={{

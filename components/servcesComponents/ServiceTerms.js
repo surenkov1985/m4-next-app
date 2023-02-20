@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import Image from "next/image";
 import React from "react";
 import styles from "../../styles/serviceStyles/terms.module.scss";
 
@@ -10,6 +11,9 @@ export default function ServiceTerms({ data }) {
 					{data.description.map((item, index) => {
 						return (
 							<div key={index} className={classNames(styles["terms__col"], item.colSize, "col-12 d-flex flex-column")}>
+								{item.icon && (
+										<Image src={item.icon} alt={item.alt}  />
+								)}
 								{item.circle && (
 									<div
 										className={classNames(
@@ -53,9 +57,7 @@ export default function ServiceTerms({ data }) {
 											{item.button}
 										</button>
 										{item.controlText && (
-											<p className={classNames(styles["terms__control-text"], "text-center my-0")}>
-												{item.controlText}
-											</p>
+											<p className={classNames(styles["terms__control-text"], "text-center my-0")}>{item.controlText}</p>
 										)}
 									</div>
 								)}

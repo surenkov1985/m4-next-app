@@ -24,7 +24,7 @@ export default function flyers(props) {
 			{data?.termsBlock && <ServiceTerms data={data.termsBlock} />}
 			{data?.bannersBlock && <ServiceBanners data={data.bannersBlock} />}
 			{data?.requestBlock && <ServicesRequest />}
-			<ServicesSlider />
+			{<ServicesSlider theme={data?.sliderTheme}/>}
 		</MainLayout>
 	);
 }

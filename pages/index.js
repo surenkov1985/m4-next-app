@@ -10,6 +10,7 @@ import { causes } from "../variables/about-causes";
 import Image from "next/image";
 import { calculateSizeAdjustValues } from "next/dist/server/font-utils";
 import { indexServices } from "../variables/indexServises";
+import Link from "next/link";
 
 export default function Index() {
 	return (
@@ -108,8 +109,8 @@ export default function Index() {
 							return (
 								<div key={service.alt} className={stylesServices["services__item"]} role="link" data-href="#">
 									<Image src={service.image} alt={service.alt} />
-									<a
-										href=""
+									<Link
+										href={service.path}
 										className={classNames(
 											stylesServices["services__item-bg"],
 											"d-flex flex-column align-items-center align-items-md-end justify-content-end"
@@ -137,7 +138,7 @@ export default function Index() {
 												{service.price}
 											</p>
 										</div>
-									</a>
+									</Link>
 								</div>
 							);
 						})}

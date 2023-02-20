@@ -13,7 +13,7 @@ export default function ServicesList({ servicesData }) {
 			<div className={classNames(styles["advertion-production__container"], "container ")}>
 				<div className={classNames(styles["advertion-production__list"], "row", servicesData.direction, styles[servicesData.direction])}>
 					{servicesData?.title && (
-						<div className="col-12 col-lg-6 d-flex align-items-center">
+						<div className={classNames("col-12 d-flex align-items-center", servicesData.titleColSize)}>
 							<div className={classNames(styles["advertion-production__title"], "mb-4 mb-lg-0")}>
 								<h2 className={classNames(styles["title"], styles[servicesData.titleSize], "my-0 text-uppercase")}>
 									{servicesData.title}

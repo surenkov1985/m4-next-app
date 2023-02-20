@@ -1,15 +1,39 @@
-import card1 from "../public/images/card1.png";
-import card2 from "../public/images/card2.png";
-import card3 from "../public/images/card3.png";
-import card4 from "../public/images/card4.png";
-import card5 from "../public/images/card5.png";
-import card6 from "../public/images/card6.png";
-import card7 from "../public/images/card7.png";
-import card8 from "../public/images/card8.png";
-import card9 from "../public/images/card9.png";
-import card10 from "../public/images/card10.png";
-import card11 from "../public/images/card11.png";
-import card12 from "../public/images/card12.png";
+import card1 from "../public/images/services/card1.png";
+import card2 from "../public/images/services/card2.png";
+import card3 from "../public/images/services/card3.png";
+import card4 from "../public/images/services/card4.png";
+import card5 from "../public/images/services/card5.png";
+import card6 from "../public/images/services/card6.png";
+import card7 from "../public/images/services/card7.png";
+import card8 from "../public/images/services/card8.png";
+import card9 from "../public/images/services/card9.png";
+import card10 from "../public/images/services/card10.png";
+import card11 from "../public/images/services/card11.png";
+import card12 from "../public/images/services/card12.png";
+
+// Изображения страницы Услуги
+
+import interiorSign from "../public/images/services/interior-signs.png";
+import lightBoxes from "../public/images/services/light-boxes.png";
+import roofInstall from "../public/images/services/roof-installation.png";
+import windowDressing from "../public/images/services/window-dressing.png";
+import pilons from "../public/images/services/pilons.png";
+import sequins from "../public/images/services/sequins.png";
+import slimPanels from "../public/images/services/sm-light-panels.png";
+import serviceMain from "../public/images/services/service-main.png";
+import laserCutting from "../public/images/services/laser-cutting.png";
+import plotterCutting from "../public/images/services/plotter-cutting.png";
+import interiorPrint from "../public/images/services/interior-print.png";
+import bussinessCard from "../public/images/services/business-card.png";
+import flyers from "../public/images/services/flyers.png";
+import badges from "../public/images/services/badges.png";
+import calendars from "../public/images/services/calendars.png";
+import plasticCards from "../public/images/services/plastic-cards.png";
+import menus from "../public/images/services/menus.png";
+import souvenirs from "../public/images/services/souvenirs.png";
+import packets from "../public/images/services/package.png";
+import digitalPrint from "../public/images/services/digital-printing.png";
+import offsetPrint from "../public/images/services/offset-print.png";
 
 export const indexServices = [
 	{
@@ -18,7 +42,7 @@ export const indexServices = [
 		text: "Вывески",
 		logo: "images/banner-icon.svg",
 		color: "rgba(235, 167, 7, 0.79)",
-		path: "",
+		path: "/services/signboards",
 		price: "от 5 000 руб",
 	},
 	{
@@ -27,7 +51,7 @@ export const indexServices = [
 		text: "Объёмные буквы",
 		logo: "images/text-icon.svg",
 		color: "rgba(62, 53, 36, 0.79)",
-		path: "",
+		path: "services/volume-letters",
 		price: "от 60 руб/см",
 	},
 	{
@@ -36,7 +60,7 @@ export const indexServices = [
 		text: "Гибкий неон",
 		logo: "images/neon-icon.svg",
 		color: "rgba(80, 10, 10, 0.79)",
-		path: "",
+		path: "services/flexible-neon",
 		price: "от 2000 руб",
 	},
 	{
@@ -45,7 +69,7 @@ export const indexServices = [
 		text: "Согласование рекламы",
 		logo: "images/adv-icon.svg",
 		color: "rgba(142, 149, 13, 0.79)",
-		path: "",
+		path: "services/advertion-production",
 		price: "от 1 000 руб",
 	},
 	{
@@ -54,7 +78,7 @@ export const indexServices = [
 		text: "Брендирование транспорта",
 		logo: "images/brand-icon.svg",
 		color: "rgba(0, 59, 78, 0.79)",
-		path: "",
+		path: "services/branding-transport",
 		price: "от 1500 руб",
 	},
 	{
@@ -63,17 +87,25 @@ export const indexServices = [
 		text: "Стенды",
 		logo: "images/billboard-icon.svg",
 		color: "rgba(20, 23, 51, 0.79)",
-		path: "",
+		path: "services/stands",
 		price: "от 1000 руб",
 	},
-	{ image: card7, alt: "card7", text: "УФ печать", logo: "images/print-icon.svg", color: "rgba(95, 23, 152, 0.79)", path: "", price: "от 500 руб" },
+	{
+		image: card7,
+		alt: "card7",
+		text: "УФ печать",
+		logo: "images/print-icon.svg",
+		color: "rgba(95, 23, 152, 0.79)",
+		path: "services/uv-print",
+		price: "от 500 руб",
+	},
 	{
 		image: card8,
 		alt: "card8",
 		text: "Широко-форматная печать",
 		logo: "images/wideprint-icon.svg",
 		color: "rgba(0, 172, 216, 0.79)",
-		path: "",
+		path: "services/widescreen-print",
 		price: "от 300 руб",
 	},
 	{
@@ -82,7 +114,7 @@ export const indexServices = [
 		text: "Наклейки",
 		logo: "images/sticker-icon.svg",
 		color: "rgba(55, 103, 63, 0.79)",
-		path: "",
+		path: "services/stickers",
 		price: "от 10 руб/шт",
 	},
 	{
@@ -91,7 +123,7 @@ export const indexServices = [
 		text: "Таблички",
 		logo: "images/table-icon.svg",
 		color: "rgba(57, 97, 100, 0.79)",
-		path: "",
+		path: "services/tables",
 		price: "от 300 руб",
 	},
 	{
@@ -100,7 +132,7 @@ export const indexServices = [
 		text: "Фрезеровка",
 		logo: "images/milling-icon.svg",
 		color: "rgba(118, 71, 0, 0.79)",
-		path: "",
+		path: "services/milling",
 		price: "от 30 руб",
 	},
 	{
@@ -109,7 +141,7 @@ export const indexServices = [
 		text: "Панель-кронштейны",
 		logo: "images/bracket-icon.svg",
 		color: "rgba(20, 23, 51, 0.79)",
-		path: "",
+		path: "services/panel-brackets",
 		price: "от 8 000 руб",
 	},
 ];
@@ -120,6 +152,7 @@ export const serviceTypes = [
 		textTheme: "text-white",
 		direction: "flex-row",
 		titleSize: "large",
+		titleColSize: "col-lg-6",
 		title: "Производство рекламы",
 		id: "advertion-production",
 		list: [
@@ -133,13 +166,157 @@ export const serviceTypes = [
 				price: "от 5 000 руб",
 			},
 			{
+				image: interiorSign,
+				alt: "Интерьерные вывески",
+				text: "Интерьерные вывески",
+				logo: "",
+				color: "rgba(45, 17, 10, 0.79)",
+				path: "services/interior-signs",
+				price: "от 2 000 руб",
+			},
+			{
+				image: card2,
+				alt: "Объёмные буквы",
+				text: "Объёмные буквы",
+				logo: "",
+				color: "rgba(62, 54, 36, 0.79)",
+				path: "services/volume-letters",
+				price: "от 80 руб/см",
+			},
+			{
+				image: lightBoxes,
+				alt: "Световые короба",
+				text: "Световые короба",
+				logo: "",
+				color: "rgba(0, 11, 48, 0.79)",
+				path: "services/light-boxes",
+				price: "от 9 000 руб/м",
+			},
+			{
+				image: card3,
+				alt: "card3",
+				text: "Гибкий неон",
+				logo: "",
+				color: "rgba(80, 10, 10, 0.79)",
+				path: "services/flexible-neon",
+				price: "от 2000 руб",
+			},
+			{
 				image: card12,
 				alt: "card12",
 				text: "Панель-кронштейны",
 				logo: "",
 				color: "rgba(20, 23, 51, 0.79)",
-				path: "",
+				path: "services/panel-brackets",
 				price: "от 8 000 руб",
+			},
+			{
+				image: roofInstall,
+				alt: "Крышные установки",
+				text: "Крышные установки",
+				logo: "",
+				color: "rgba(0, 59, 78, 0.79)",
+				path: "services/roof-install",
+				price: "от 15 000 руб",
+			},
+			{
+				image: windowDressing,
+				alt: "Оформление витрин",
+				text: "Оформление витрин",
+				logo: "",
+				color: "rgba(22, 80, 76, 0.79)",
+				path: "services/window-dressing",
+				price: "от 1 000 руб",
+			},
+			{
+				image: pilons,
+				alt: "Пилоны и стеллы",
+				text: "Пилоны и стеллы",
+				logo: "",
+				color: "rgba(0, 61, 152, 0.79)",
+				path: "services/pilons",
+				price: "от 30 000 руб",
+			},
+			{
+				image: card5,
+				alt: "card5",
+				text: "Брендирование транспорта",
+				logo: "",
+				color: "rgba(0, 59, 78, 0.79)",
+				path: "services/branding-transport",
+				price: "от 1500 руб",
+			},
+			{
+				image: sequins,
+				alt: "Живая реклама",
+				text: "Живая реклама (пайетки)",
+				logo: "",
+				color: "rgba(120, 27, 14, 0.79)",
+				path: "services/sequins",
+				price: "от 10 000 руб",
+			},
+			{
+				image: card6,
+				alt: "card6",
+				text: "Стенды",
+				logo: "",
+				color: "rgba(20, 23, 51, 0.79)",
+				path: "services/stands",
+				price: "от 1000 руб",
+			},
+			{
+				image: card10,
+				alt: "card10",
+				text: "Таблички",
+				logo: "",
+				color: "rgba(57, 97, 100, 0.79)",
+				path: "services/tables",
+				price: "от 300 руб",
+			},
+			{
+				image: slimPanels,
+				alt: "Тонкие световые панели",
+				text: "Тонкие световые панели",
+				logo: "",
+				color: "rgba(64, 89, 11, 0.79)",
+				path: "services/slim-panels",
+				price: "от 5 000 руб",
+			},
+			{
+				image: card4,
+				alt: "card4",
+				text: "Согласование рекламы",
+				logo: "",
+				color: "rgba(142, 149, 13, 0.79)",
+				path: "services/advertion-production",
+				price: "от 1 000 руб",
+			},
+			{
+				image: serviceMain,
+				alt: "Сервисное обслуживание",
+				text: "Сервисное обслуживание",
+				logo: "",
+				color: "rgba(55, 103, 63, 0.79)",
+				path: "services/service-main",
+				price: "от 1 000 руб",
+			},
+			{
+				image: laserCutting,
+				alt: "Лазерная резка и гравировка",
+				text: "Лазерная резка и гравировка",
+				logo: "",
+				color: "rgba(0, 27, 78, 0.79)",
+				path: "services/laser-cutting",
+				price: "от 50 руб м.п.",
+			},
+			{
+				image: card11,
+				alt: "card11",
+				text: "Фрезеровка",
+				logo: "",
+				color: "rgba(118, 71, 0, 0.79)",
+				path: "services/milling",
+				price: "от 30 руб",
 			},
 		],
 	},
@@ -148,26 +325,54 @@ export const serviceTypes = [
 		textTheme: "text-dark",
 		direction: "flex-row-reverse",
 		titleSize: "light",
+		titleColSize: "col-lg-9",
 		id: "printing",
 		title: "Печать широкорматная, интерьерная , УФ",
 		list: [
 			{
-				image: card1,
-				alt: "card1",
-				text: "Вывески",
-				logo: "",
-				color: "rgba(235, 167, 7, 0.79)",
-				path: "services/signboards",
-				price: "от 5 000 руб",
+				image: card8,
+				alt: "card8",
+				text: "Широко-форматная печать",
+				logo: "images/wideprint-icon.svg",
+				color: "rgba(0, 172, 216, 0.79)",
+				path: "services/widescreen-print",
+				price: "от 300 руб",
 			},
 			{
-				image: card12,
-				alt: "card12",
-				text: "Панель-кронштейны",
+				image: plotterCutting,
+				alt: "Плоттерная резка",
+				text: "Плоттерная резка",
 				logo: "",
-				color: "rgba(20, 23, 51, 0.79)",
-				path: "",
-				price: "от 8 000 руб",
+				color: "rgba(45, 17, 10, 0.79)",
+				path: "services/plotter-cutting",
+				price: "от 500 руб",
+			},
+			{
+				image: card9,
+				alt: "card9",
+				text: "Стикеры",
+				logo: "",
+				color: "rgba(55, 103, 63, 0.79)",
+				path: "services/stickers",
+				price: "от 10 руб/шт",
+			},
+			{
+				image: card7,
+				alt: "card7",
+				text: "УФ печать",
+				logo: "",
+				color: "rgba(95, 23, 152, 0.79)",
+				path: "services/uv-print",
+				price: "от 500 руб",
+			},
+			{
+				image: interiorPrint,
+				alt: "Интерьерная печать",
+				text: "Интерьерная печать",
+				logo: "",
+				color: "rgba(80, 22, 22, 0.79)",
+				path: "services/uv-print",
+				price: "от 350 руб",
 			},
 		],
 	},
@@ -176,27 +381,100 @@ export const serviceTypes = [
 		textTheme: "text-dark",
 		direction: "flex-row",
 		titleSize: "small",
+		titleColSize: "col-lg-6",
 		id: "polygraphy",
 		title: "Полиграфические услуги",
 		list: [
 			{
-				image: card1,
-				alt: "card1",
-				text: "Вывески",
+				image: bussinessCard,
+				alt: "Визитки",
+				text: "Визитки",
 				logo: "",
-				color: "rgba(235, 167, 7, 0.79)",
+				color: "rgba(0, 172, 216, 0.79)",
 				id: "signboards",
-				path: "services/signboards",
-				price: "от 5 000 руб",
+				path: "services/business-card",
+				price: "от 600 руб",
 			},
 			{
-				image: card12,
-				alt: "card12",
-				text: "Панель-кронштейны",
+				image: flyers,
+				alt: "Флаеры, листовки",
+				text: "Флаеры, листовки",
 				logo: "",
-				color: "rgba(20, 23, 51, 0.79)",
-				path: "",
-				price: "от 8 000 руб",
+				color: "rgba(130, 175, 0, 0.79)",
+				path: "services/flyers",
+				price: "от 1000 руб",
+			},
+			{
+				image: badges,
+				alt: "Бейджи",
+				text: "Бейджи",
+				logo: "",
+				color: "rgba(0, 59, 78, 0.79)",
+				path: "services/badges",
+				price: "от 250 руб",
+			},
+			{
+				image: calendars,
+				alt: "Календари",
+				text: "Календари",
+				logo: "",
+				color: "rgba(80, 22, 22, 0.79)",
+				path: "services/calendars",
+				price: "от 200 руб",
+			},
+			{
+				image: plasticCards,
+				alt: "Пластиковые карты",
+				text: "Пластиковые карты",
+				logo: "",
+				color: "rgba(50, 50, 51, 0.79)",
+				path: "services/plastic-cards",
+				price: "от 20 руб",
+			},
+			{
+				image: menus,
+				alt: "Меню для кафе и ресторанов",
+				text: "Меню для кафе и ресторанов",
+				logo: "",
+				color: "rgba(99, 76, 59, 0.79)",
+				path: "services/menus",
+				price: "от 500 руб",
+			},
+			{
+				image: souvenirs,
+				alt: "Сувенирная продукция",
+				text: "Сувенирная продукция",
+				logo: "",
+				color: "rgba(80, 31, 220, 0.79)",
+				path: "services/souvenirs",
+				price: "от 200 руб",
+			},
+			{
+				image: packets,
+				alt: "Пакеты",
+				text: "Пакеты",
+				logo: "",
+				color: "rgba(220, 190, 31, 0.79)",
+				path: "services/package",
+				price: "от 10 руб",
+			},
+			{
+				image: digitalPrint,
+				alt: "Оперативная цифровая печать",
+				text: "Оперативная цифровая печать",
+				logo: "",
+				color: "rgba(55, 103, 63, 0.79)",
+				path: "services/digital-print",
+				price: "от 500 руб",
+			},
+			{
+				image: offsetPrint,
+				alt: "Офсетная печать",
+				text: "Офсетная печать",
+				logo: "",
+				color: "rgba(37, 33, 48, 0.79)",
+				path: "services/offset-print",
+				price: "от 1000 руб",
 			},
 		],
 	},

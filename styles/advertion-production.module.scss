@@ -242,7 +242,15 @@
     }
 
     &__slider {
-        background: #282828;
+
+        &.dark {
+            background: #282828;
+        }
+
+        &.light {
+            background: #FFFFFF;
+        }
+
 
         &-container {
             padding-top: 55px;

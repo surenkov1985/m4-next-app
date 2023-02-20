@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Footer from "./Footer";
-import Header from "./header";
+import Header from "./Header";
 
 export function MainLayout({ children }) {
 	const router = useRouter();

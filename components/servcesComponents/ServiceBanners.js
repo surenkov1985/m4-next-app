@@ -11,18 +11,33 @@ export default function ServiceBanners({ data }) {
 					{data.banners.map((banner, index) => {
 						return (
 							<li key={index} className={classNames(styles["banners__item"], styles["banner"], "col-12 col-lg-6")}>
-								<div className="row mx-0">
+								<div className="row mx-0 h-100">
 									<div
 										className={classNames(
 											styles["banner__title-block"],
-											"col-6 px-0 d-flex flex-column align-items-center justify-content-center"
+											"col-6 px-0 d-flex flex-column align-items-center justify-content-center p-2"
 										)}
 										style={{ background: `rgba(${banner.color}, 0.79)` }}
 									>
 										<h3 className={classNames(styles["banner__title"], "text-center w-75 text-white font-weight-light")}>
 											{banner.title}
 										</h3>
-										<p className={classNames(styles["banner__price"], "text-white font-weight-light")}>{banner.price}</p>
+										<p className={classNames(styles["banner__price"], "text-white font-weight-light text-center ")}>
+											{banner.price}
+										</p>
+										{banner.button && (
+											<div className={classNames(styles["banner__control"], "w-75 d-flex justify-content-center")}>
+												{banner.time && <span class="text-white font-weight-light">Печать за 1 день!</span>}
+												<button
+													className={classNames(
+														styles["banner__btn"],
+														"btn rounded-pill btn-sm btn-outline-light text-white w-100 mt-auto"
+													)}
+												>
+													ЗАКАЗАТЬ
+												</button>
+											</div>
+										)}
 									</div>
 									<div className={classNames(styles["banner__image"], "col-6 px-0")}>
 										<Image className="w-100 h-100" src={banner.image} alt={banner.title} />
