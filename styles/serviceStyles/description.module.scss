@@ -49,6 +49,37 @@
             }
         }
 
+        &-list-title {
+            font-size: 2.25rem;
+            color: #565656;
+            position: relative;
+            font-weight: 300;
+
+            @media (max-width: 768px) {
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+
+            @media (max-width: 550px) {
+                font-size: 1.125rem;
+                font-weight: 300;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 500px;
+                height: 2px;
+                border: 1px solid #c7c7c7;
+                bottom: -20px;
+                left: calc(50% - 250px);
+
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
+        }
+
         &-text {
             font-size: 1.25rem;
             line-height: 38px;
@@ -155,7 +186,10 @@
 }
 
 .causes {
+
+
     &__item {
+        column-gap: 20px;
 
         @media (max-width: 991px) {
             border-top: 1px solid #F5F5F5;
@@ -174,11 +208,25 @@
             font-weight: 900;
 
             @media (max-width: 768px) {
+                font-size: 90px;
                 line-height: 90px;
             }
 
             @media (max-width: 550px) {
+                font-size: 80px;
                 line-height: 75px;
+            }
+
+            &.lg {
+                @media (max-width: 768px) {
+                    font-size: 90px;
+                    line-height: 90px;
+                }
+
+                @media (max-width: 550px) {
+                    font-size: 60px;
+                    line-height: 75px;
+                }
             }
         }
 
@@ -199,19 +247,48 @@
         }
 
         &-desc {
-            font-size: 18px;
-            line-height: 32px;
-            color: #373737;
 
-            @media (max-width: 768px) {
-                font-size: 16px;
-                line-height: 30px;
+            &.sm {
+                font-size: 18px;
+                line-height: 32px;
+                color: #373737;
+
+                @media (max-width: 768px) {
+                    font-size: 16px;
+                    line-height: 30px;
+                }
+
+                @media (max-width: 550px) {
+                    font-size: 14px;
+                    line-height: 26px;
+                }
             }
 
-            @media (max-width: 550px) {
-                font-size: 14px;
-                line-height: 26px;
+            &.lg {
+                font-size: 28px;
+                line-height: 38px;
+                color: #373737;
+                margin-bottom: 0;
+
+                @media (max-width: 991px) {
+                    font-size: 24px;
+                    line-height: 30px;
+                    text-align: center;
+                }
+
+
+                @media (max-width: 768px) {
+                    font-size: 20px;
+                    line-height: 30px;
+                    text-align: center;
+                }
+
+                @media (max-width: 550px) {
+                    font-size: 14px;
+                    line-height: 14px;
+                }
             }
+
         }
     }
 }

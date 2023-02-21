@@ -6,7 +6,24 @@ import styles from "../../styles/serviceStyles/terms.module.scss";
 export default function ServiceTerms({ data }) {
 	return (
 		<section className={classNames(styles["terms"], styles[data.theme])}>
-			<div className={classNames(styles["terms__container"], "container d-flex justify-content-center")}>
+			<div className={classNames(styles["terms__container"], "container d-flex flex-column align-items-center")}>
+				{data.title && (
+					<div
+						className={classNames(
+							styles["causes__item"],
+							styles["signboards__description-text-list"],
+							// styles[item.textSize],
+							"d-flex align-items-center w-75"
+							// item.size,
+							// item.direction
+						)}
+					>
+						{data.mark && <div className={classNames(styles["causes__item-num"], "text-right")}>{data.mark}</div>}
+						<div className={styles["causes__item-text"]}>
+							{data.title && <h4 className={styles["causes__item-title"]}>{data.title}</h4>}
+						</div>
+					</div>
+				)}
 				<div className={classNames(styles["terms__row"], styles[data.page], "row ml-0")}>
 					{data.description.map((item, index) => {
 						return (
@@ -53,18 +70,21 @@ export default function ServiceTerms({ data }) {
 								{item.list && (
 									<>
 										<h3 className={styles["terms__plus-list-title"]}>{item.list.title}</h3>
-										<ul className={styles["terms__plus-list"]}>
-											{item.list.items.map((item, index) => {
-												return <li key={index}>{item}</li>;
-											})}
-										</ul>
+										{item.list.items && (
+											<ul className={classNames(styles["terms__plus-list"], "d-flex flex-column")}>
+												{item.list.items.map((item, index) => {
+													return <li key={index}>{item}</li>;
+												})}
+											</ul>
+										)}
+										{item.list.text && <li className={classNames(styles["terms__plus-list"])}>{item.list.text}</li>}
 									</>
 								)}
 								{item.button && (
 									<div
 										className={classNames(
 											styles["terms__control"],
-											"d-flex align-items-center justify-content-center justify-content-md-start"
+											"d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-md-start"
 										)}
 									>
 										<button className={classNames(styles["terms__btn"], "btn btn-sm text-uppercase rounded-pill text-white ")}>
@@ -79,6 +99,19 @@ export default function ServiceTerms({ data }) {
 						);
 					})}
 				</div>
+				{data.button && (
+					<div
+						className={classNames(
+							styles["terms__control"],
+							"d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-md-start"
+						)}
+					>
+						<button className={classNames(styles["terms__btn"], "btn btn-sm text-uppercase rounded-pill text-white ")}>
+							{data.button}
+						</button>
+						{data.controlText && <p className={classNames(styles["terms__control-text"], "text-center my-0")}>{data.controlText}</p>}
+					</div>
+				)}
 			</div>
 		</section>
 	);
