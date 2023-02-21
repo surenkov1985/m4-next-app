@@ -1,15 +1,15 @@
 @import "../variables.scss";
 
-.terms {
+.more {
 
     &.dark {
         background: #414141;
 
-        & .terms__text {
+        & .more__text {
             color: #FFFFFF;
         }
 
-        & .terms__control-text {
+        & .more__control-text {
             color: #FFFFFF;
         }
     }
@@ -17,6 +17,46 @@
     &.light {
         background: #FFFFFF;
     }
+
+    &__title {
+        font-size: 2.25rem;
+        color: $ButtonColor;
+        position: relative;
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 38px;
+
+        @media (max-width: 768px) {
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: 30px;
+        }
+
+        @media (max-width: 550px) {
+            font-size: 1.625rem;
+            font-weight: 300;
+            line-height: 26px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 2px;
+            border: 1px solid #c7c7c7;
+            bottom: -20px;
+            left: calc(50% - 250px);
+
+            @media (max-width: 768px) {
+                width: 308px;
+                left: calc(50% - 154px);
+                // display: none;
+            }
+        }
+    }
+
+
+
 
     &__icon {
         width: 274px;
@@ -91,6 +131,7 @@
     &__row {
         margin-left: 0;
         margin-right: 0;
+        margin-top: 47px;
 
         &.signboard {
             width: 90%;
@@ -100,6 +141,7 @@
                 width: 100%;
                 margin-left: 0;
                 margin-right: 0;
+                margin-top: 37px;
             }
         }
 
@@ -128,25 +170,26 @@
 
     }
 
-    &__title {
-        font-size: 40px;
-        line-height: 58px;
-        color: $ButtonColor;
+    // &__title {
+    //     font-size: 40px;
+    //     line-height: 58px;
+    //     color: $ButtonColor;
 
-        @media (max-width: 768px) {
-            font-size: 30px;
-        }
+    //     @media (max-width: 768px) {
+    //         font-size: 30px;
+    //     }
 
-        @media (max-width: 550px) {
-            font-size: 20px;
-        }
-    }
+    //     @media (max-width: 550px) {
+    //         font-size: 20px;
+    //     }
+    // }
 
     &__text {
         font-size: 20px;
         margin-top: 20px;
         line-height: 34px;
         color: #565656;
+        font-weight: 300;
 
         @media (max-width: 768px) {
             font-size: 16px;
@@ -193,41 +236,38 @@
         }
 
         &-list {
-            list-style: disc;
+            list-style: decimal;
+            column-gap: 95px;
             color: #FFFFFF;
             font-size: 1.25rem;
             line-height: 38px;
             font-weight: 300;
             margin-bottom: 40px;
             letter-spacing: 0.05rem;
+            flex-wrap: wrap;
 
             @media (max-width: 768px) {
-                font-weight: 400;
                 font-size: 1rem;
-                line-height: 26px;
+                line-height: 30px;
             }
 
-            @media (max-width: 550px) {
-                font-size: 0.875rem;
-                line-height: 26px;
-            }
+            
 
             &-title {
+                font-weight: 300;
                 font-size: 1.5rem;
-                font-weight: 500;
-                color: #FFFFFF;
-                line-height: 38px;
-                margin-bottom: 40px;
+                line-height: 40px;
+                color: $ButtonColor;
+                // margin-bottom: 40px;
 
                 @media (max-width: 768px) {
-                    font-weight: 400;
                     font-size: 1.25rem;
-                    line-height: 26px;
+                    line-height: 30px;
                 }
 
                 @media (max-width: 550px) {
-                    font-size: 1.125rem;
-                    line-height: 26px;
+                    font-size: 1.25rem;
+                    line-height: 28px;
                 }
             }
         }
