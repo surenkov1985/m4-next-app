@@ -5,7 +5,7 @@ import styles from "../../styles/serviceStyles/more.module.scss";
 
 export default function ServiceMore({ data }) {
 	return (
-		<section className={classNames(styles["more"], styles[data.theme])}>
+		<section className={classNames(styles["more"], styles[data.theme], styles[data.page])}>
 			<div className={classNames(styles["more__container"], "container d-flex flex-column align-items-center")}>
 				{data.title && (
 					<div
@@ -88,9 +88,29 @@ export default function ServiceMore({ data }) {
 									<>
 										<h3 className={classNames(styles["more__plus-list-title"], "text-center")}>{item.list.title}</h3>
 										{item.list.items && (
-											<ul className={classNames(styles["more__plus-list"], "d-flex flex-column flex-lg-row align-items-center justify-content-center")}>
+											<ul
+												className={classNames(
+													styles["more__plus-list"],
+													"d-flex flex-column flex-md-row align-items-center justify-content-center"
+												)}
+											>
 												{item.list.items.map((item, index) => {
-													return <li key={index}>{item}</li>;
+													return (
+														<>
+															<li key={index} className={classNames(styles[item.size])}>
+																{item.title && (
+																	<p className={classNames(styles["more__plus-title"], "text-center text-md-left")}>
+																		{item.title}
+																	</p>
+																)}
+																{item.text && (
+																	<p className={classNames(styles["more__plus-list"], "text-center text-md-left")}>
+																		{item.text}
+																	</p>
+																)}
+															</li>
+														</>
+													);
 												})}
 											</ul>
 										)}

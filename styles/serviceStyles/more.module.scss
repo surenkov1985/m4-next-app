@@ -18,6 +18,42 @@
         background: #FFFFFF;
     }
 
+    &.pilons {
+        & .more__plus-list {
+            list-style-type: none;
+            column-gap: 0px;
+            
+            & li {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            &-title {
+                font-size: 50px;
+                line-height: 52px;
+                color: #FFFFFF;
+                font-weight: 500;
+
+                @media (max-width: 768px) {
+                    font-size: 2.25rem;
+                    line-height: 30px;
+                }
+
+                @media (max-width: 550px) {
+                    color: $ButtonColor;
+                    font-size: 1.25rem;
+                    line-height: 24px;
+                }
+            }
+        }
+
+        & .more__col {
+            padding-left: 0;
+            padding-right: 0;  
+        }
+    }
+
+
     &__title {
         font-size: 2.25rem;
         color: $ButtonColor;
@@ -55,7 +91,7 @@
         }
     }
 
-
+    
 
 
     &__icon {
@@ -228,11 +264,17 @@
     &__plus {
 
         &-title {
-            font-size: 50px;
-            line-height: 52px;
-            font-weight: 300;
+            font-size: 28px;
+            line-height: 38px;
+            font-weight: 500;
             color: #FFFFFF;
-            margin-bottom: 65px;
+            // margin-bottom: 65px;
+
+            @media (max-width: 768px) {
+                font-size: 24px;
+            }
+
+            
         }
 
         &-list {
@@ -251,7 +293,17 @@
                 line-height: 30px;
             }
 
-            
+            & .col-12 {
+                width: 100%;
+
+                @media (min-width: 768px) {
+                    width: 50%
+                }
+
+                @media (min-width: 1200px) {
+                    width: 33.3%
+                }
+            }
 
             &-title {
                 font-weight: 300;
@@ -270,6 +322,18 @@
                     line-height: 28px;
                 }
             }
+        }
+    }
+
+    & .col-12 {
+        width: 100%;
+
+        @media (min-width: 768px) {
+            width: 50%
+        }
+
+        @media (min-width: 1200px) {
+            width: 33.3%
         }
     }
 
