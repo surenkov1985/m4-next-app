@@ -111,9 +111,25 @@ import urban from "../public/images/services/sequins/urban.png";
 import moneyIcon from "../public/images/services/sequins/money.svg"
 import designIcon from "../public/images/services/sequins/design.svg";
 import sunIcon from "../public/images/services/sequins/sun.svg";
-import widthIcon from "../public/images/services/sequins/width.svg";
+import sizeIcon from "../public/images/services/sequins/size.svg";
 import colorIcon from "../public/images/services/sequins/color.svg";
 import handIcon from "../public/images/services/sequins/hand.svg";
+
+// // Изображения страницы Информационные стенды
+
+import standsIcon from "../public/images/services/stands/stands-icon.svg";
+
+import schemeStand from "../public/images/services/stands/scheme-stand.png";
+import bookStand from "../public/images/services/stands/book-stand.png";
+import boxStand from "../public/images/services/stands/box-stand.png";
+import visitStand from "../public/images/services/stands/visit-stand.png";
+
+import materialsIcon from "../public/images/services/stands/materials.svg";
+import uvPrintIcon from "../public/images/services/stands/uv-print.svg";
+import inscriptionIcon from "../public/images/services/stands/inscription.svg";
+import widthIcon from "../public/images/services/stands/width.svg";
+import pocketsIcon from "../public/images/services/stands/pockets.svg";
+import framesIcon from "../public/images/services/stands/frames.svg";
 
 export const servicePagesData = [
 	{
@@ -1937,7 +1953,7 @@ export const servicePagesData = [
 					size: `col-lg-12`,
 					items: [
 						{
-							icon: widthIcon,
+							icon: sizeIcon,
 							text: `Не имеет ограничений в размере`,
 						},
 						{
@@ -1947,6 +1963,73 @@ export const servicePagesData = [
 						{
 							icon: handIcon,
 							text: `Простота ухода`,
+						},
+					],
+				},
+			],
+		},
+	},
+	{
+		//  Данные страницы Живая реклама
+		id: "stands",
+		sliderTheme: "dark",
+		titleBlock: {
+			title: "Информ-ационные стенды",
+			text: [
+				`Информационный стенд – это способ донесения важной и актуальной информации до покупателей, сотрудников, посетителей предприятия или торгового помещения. Стенды имеют особую конструкцию, благодаря которой можно быстро заменять устаревшую рекламную или новостную информацию на новую.`,
+			],
+			icon: standsIcon,
+		},
+		descriptionBlock: {
+			page: "stands",
+			gallery: [schemeStand, bookStand, boxStand, visitStand],
+			title: "Из чего делают информационные стенды",
+			button: "Оставить заявку",
+			controlText: "Срок выполнения от 5 до 10 рабочих дней.",
+			text: [
+				{
+					text: `Панели с пайетками используются для создания элементов наружной рекламы, вывесок, оформления зданий, изготовления ярких фотозон, дизайна внутренних пространств, декорирования витрин, праздничного городского оформления, мозаичных изображений, разноцветных панно и многого другого.  Для изготовления панелей с пайетками применяются только качественные материалы, прошедшие долгое тестирование в разных климатических зонах.`,
+					size: "col-lg-12 text-center",
+				},
+			],
+			punkts: [
+				{
+					size: `col-lg-6`,
+					items: [
+						{
+							icon: materialsIcon,
+							title: "Материалы",
+							text: `Популярностью среди материалов для информационных стендов пользуется ПВХ, другими словами пластик или поливинилхлорид. Другие популярные материалы для изготовления стенда: композит, металл, оргстекло, акрил.`,
+						},
+						{
+							icon: uvPrintIcon,
+							title: "УФ печать и плёнка",
+							text: `Изначально основа белого цвета. Для изменения цвета используют самоклеящуюся пленку. Для дизайна стенда наклеивают пленку с оригинальным изображением.`,
+						},
+						{
+							icon: inscriptionIcon,
+							title: "Надписи",
+							text: `Для размещения надписи на стендах используется пленка с заранее напечатанными буквами или пленка Оракал. Также возможно исполнение надписи из объемных букв из ПВХ или акрила.`,
+						},
+					],
+				},
+				{
+					size: `col-lg-6`,
+					items: [
+						{
+							icon: widthIcon,
+							title: "Толщина",
+							text: `Толщина стенда зависит от места расположения, пожеланий клиента и других факторов. Чаще изготавливают из ПВХ толщиной от 3 до 8 мм. Такая толщина оптимальна — стенд надежный и крепкий, но при этом не тяжелый.`,
+						},
+						{
+							icon: pocketsIcon,
+							title: "Карманы",
+							text: `Карманы для сменной информации изготавливают из оргстекла или прозрачного пластика. Стандартный размер кармашка — формат А4. По желанию клиента мы изготовим карман нужного размера и конфигурации.`,
+						},
+						{
+							icon: framesIcon,
+							title: "Рамки и крепления",
+							text: `Для укрепления торцов стенда применяется рамка из алюминиевого профиля. К рамкам крепятся подвесы для настенных стендов, а также стойки-ножки для переносных стендов.`,
 						},
 					],
 				},

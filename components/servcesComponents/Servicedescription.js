@@ -90,9 +90,16 @@ export default function ServiceDescription({ data }) {
 												return (
 													<li key={index} className={styles["causes__punkt-text"]}>
 														{item.icon && <Image src={item.icon} alt={"icon"} />}
-														<p className={classNames(styles["causes__punkt-desc"], "font-weight-light mb-0")}>
-															{item.text}
-														</p>
+														<div>
+															{item.title && (
+																<p className={classNames(styles["causes__punkt-title"], "my-0")}>
+																	{item.title}
+																</p>
+															)}
+															<p className={classNames(styles["causes__punkt-desc"], "font-weight-light mb-0")}>
+																{item.text}
+															</p>
+														</div>
 													</li>
 												);
 											})}

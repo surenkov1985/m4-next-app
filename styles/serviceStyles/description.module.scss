@@ -64,6 +64,86 @@
             }
         }
 
+        &.stands {
+            & .causes {
+                &__punkt {
+
+                    &-list {
+                        display: flex;
+                        flex-direction: row;
+                        list-style: none;
+                        width: 90%;
+                        flex-wrap: wrap;
+                        column-gap: 30px;
+
+                        @media (max-width: 1200px) {
+                            width: 100%;
+                            justify-content: center;
+                        }
+
+                        @media (max-width: 768px) {
+                            width: 100%;
+                            flex-direction: column;
+                            justify-content: center;
+                        }
+
+                    }
+
+                    &-title {
+                        font-weight: 900;
+                        font-size: 30px;
+                        line-height: 52px;
+                        color: #797979;
+                        padding-left: 20px;
+
+                        @media (max-width: 768px) {
+                            font-size: 26px;
+                            font-weight: 700;
+                            line-height: 32px;
+                            padding-left: 10px;
+                        }
+
+                        @media (max-width: 550px) {
+                            font-size: 20px;
+                            font-weight: 700;
+                            line-height: 30px;
+                        }
+                    }
+
+                    &-text {
+                        display: flex;
+                        flex-direction: row;
+                        column-gap: 20px;
+                        align-items: flex-start;
+
+                        & img {
+                            @media (max-width: 550px) {
+                                width: 45px;
+                            }
+                        }
+                    }
+
+                    &-desc {
+                        font-weight: 300;
+                        font-size: 24px;
+                        line-height: 30px;
+
+                        @media (max-width: 768px) {
+                            font-size: 1.25rem;
+                            font-weight: 500;
+                            line-height: 26px;
+                        }
+
+                        @media (max-width: 550px) {
+                            font-size: 1rem;
+                            font-weight: 300;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
         &-container {
             padding: 55px 40px;
 
