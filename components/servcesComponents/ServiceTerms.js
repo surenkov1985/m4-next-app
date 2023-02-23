@@ -27,8 +27,15 @@ export default function ServiceTerms({ data }) {
 				<div className={classNames(styles["terms__row"], styles[data.page], "row ml-0")}>
 					{data.description.map((item, index) => {
 						return (
-							<div key={index} className={classNames(styles["terms__col"], item.colSize, "col-12 d-flex flex-column")}>
-								{item.icon && <Image src={item.icon} alt={item.alt} />}
+							<div
+								key={index}
+								className={classNames(
+									styles["terms__col"],
+									item.colSize,
+									"col-12 d-flex flex-column align-items-center align-items-md-start"
+								)}
+							>
+								{item.icon && <Image className={styles["terms__img"]} src={item.icon} alt={item.alt} />}
 								{item.plusBlock && (
 									<>
 										<h2 className={classNames(styles["terms__plus-title"])}>{item.plusBlock.title}</h2>
@@ -104,7 +111,8 @@ export default function ServiceTerms({ data }) {
 									<div
 										className={classNames(
 											styles["terms__control"],
-											"d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-md-start"
+											"d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-md-start",
+											item.direction
 										)}
 									>
 										<button className={classNames(styles["terms__btn"], "btn btn-sm text-uppercase rounded-pill text-white ")}>
