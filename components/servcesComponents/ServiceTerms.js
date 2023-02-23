@@ -5,7 +5,7 @@ import styles from "../../styles/serviceStyles/terms.module.scss";
 
 export default function ServiceTerms({ data }) {
 	return (
-		<section className={classNames(styles["terms"], styles[data.theme])}>
+		<section className={classNames(styles["terms"], styles[data.theme], styles[data.page])}>
 			<div className={classNames(styles["terms__container"], "container d-flex flex-column align-items-center")}>
 				{data.title && (
 					<div
@@ -98,13 +98,27 @@ export default function ServiceTerms({ data }) {
 									<>
 										<h3 className={styles["terms__plus-list-title"]}>{item.list.title}</h3>
 										{item.list.items && (
-											<ul className={classNames(styles["terms__plus-list"], "d-flex flex-column")}>
+											<ul className={classNames(styles["terms__plus-list"], "d-flex mx-auto")}>
 												{item.list.items.map((item, index) => {
-													return <li key={index}>{item}</li>;
+													return (
+														<li key={index} className={classNames(styles["terms__plus-list-item"], "d-flex flex-row align-items-center")}>
+															{item.icon && (
+																// <div className={classNames(styles["terms__plus-list-icon"], "d-flex align-items-center justify-content-center")}>
+																	<Image src={item.icon} alt="icon"/>
+																// </div>
+															)}
+															<span>{item.text}</span>
+														</li>
+													);
 												})}
 											</ul>
 										)}
-										{item.list.text && <li className={classNames(styles["terms__plus-list"])}>{item.list.text}</li>}
+										{item.list.text && <li className={classNames(styles["terms__plus-list"], "d-flex align-items-center")}>
+											{item.list.icon && <span>
+													<Image src={item.list.icon}/>
+												</span>}
+											<span>{item.list.text}</span>
+											</li>}
 									</>
 								)}
 								{item.button && (

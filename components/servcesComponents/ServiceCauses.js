@@ -4,10 +4,10 @@ import styles from "../../styles/serviceStyles/causes.module.scss";
 
 export default function ServiceCauses({ data }) {
 	return (
-		<section className={classNames(styles["signboards__causes"], styles["causes"])}>
+		<section className={classNames(styles["signboards__causes"], styles["causes"], styles[data.page])}>
 			<div className="container px-0">
 				<div className={classNames(styles["signboards__causes-block"], "d-flex flex-column flex-lg-row w-100")}>
-					<div className="col-12 col-lg-4 px-0 ml-0">
+					<div className="col-12 col-lg-5 col-xl-4 px-0 ml-0">
 						<div
 							className={classNames(
 								styles["signboards__causes-card"],
@@ -24,7 +24,7 @@ export default function ServiceCauses({ data }) {
 						</div>
 					</div>
 
-					<div className="col-12 col-lg-8 pr-0 pl-0">
+					<div className="col-12 col-lg-7 col-xl-8 pr-0 pl-0">
 						<ul
 							className={classNames(
 								styles["signboards__causes-list"],
@@ -35,7 +35,7 @@ export default function ServiceCauses({ data }) {
 							{data.cardList.map((column, index) => {
 								return (
 									<div
-									key={index}
+										key={index}
 										className={classNames(
 											styles["causes__list-column"],
 											styles["col-12"],

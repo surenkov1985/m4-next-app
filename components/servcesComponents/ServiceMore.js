@@ -91,7 +91,7 @@ export default function ServiceMore({ data }) {
 											<ul
 												className={classNames(
 													styles["more__plus-list"],
-													"d-flex flex-column flex-md-row align-items-center justify-content-center"
+													"d-flex flex-column flex-md-row justify-content-center"
 												)}
 											>
 												{item.list.items.map((item, index) => {
@@ -114,9 +114,17 @@ export default function ServiceMore({ data }) {
 												})}
 											</ul>
 										)}
-										{item.list.text && <li className={classNames(styles["more__plus-list"])}>{item.list.text}</li>}
+										{item.list.text && <li className={classNames(styles["more__plus-list"], "text-center")}>{item.list.text}</li>}
 									</>
 								)}
+								{item.subText &&
+									item?.subText?.map((text, index) => {
+										return (
+											<p key={index} className={classNames(styles["more__text"], "text-center mt-0")}>
+												{text.text}
+											</p>
+										);
+									})}
 								{item.button && (
 									<div
 										className={classNames(

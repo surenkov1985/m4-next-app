@@ -7,7 +7,6 @@
 
         @media (max-width: 768px) {
             padding: 16px 10px;
-
         }
     }
 
@@ -36,7 +35,6 @@
 
         & .row {
             margin: 0;
-
         }
 
         & .banner__image {
@@ -53,16 +51,6 @@
                 transition: all 0.3s;
             }
         }
-
-        // &:hover {
-        //     & .banner__image {
-        //         &::after {
-        //             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.8));
-        //             background: rgba(0, 0, 0, 0.3);
-        //         }
-
-        //     }
-        // }
     }
 
     &__description {
@@ -112,18 +100,15 @@
 
 .banner {
 
-
     &__row {
         position: relative;
 
         &:hover {
+            
             & .banner__image {
-
                 backdrop-filter: blur(9px);
 
                 &::after {
-                    // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.8));
-                    // background: rgba(0, 0, 0, 0.3);
                     backdrop-filter: blur(9px);
                 }
             }

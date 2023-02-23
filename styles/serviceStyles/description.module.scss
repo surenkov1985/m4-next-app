@@ -2,7 +2,6 @@
 
 .signboards {
 
-
     &__description {
 
         &-container {
@@ -10,7 +9,6 @@
 
             @media (max-width: 768px) {
                 padding: 16px 10px 29px;
-
             }
         }
 
@@ -187,9 +185,63 @@
 
 .causes {
 
+    &__punkt {
+
+        &-title {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 30px;
+            color: #565656;
+            margin-top: 40px;
+
+            @media (max-width: 768px) {
+                margin-top: 30px;
+                font-size: 20px;
+                line-height: 26px;
+            }
+
+            @media (max-width: 550px) {
+                margin-top: 20px;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+
+        & ul {
+            row-gap: 48px;
+
+            @media (max-width: 768px) {
+                row-gap: 40px;
+            }
+
+            @media (max-width: 550px) {
+                row-gap: 30px;
+            }
+        }
+
+
+        &-text {
+            list-style: disc;
+        }
+
+        &-desc {
+            font-size: 20px;
+            line-height: 30px;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+                line-height: 26px;
+            }
+
+            @media (max-width: 550px) {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+    }
+
 
     &__item {
-        column-gap: 20px;
 
         @media (max-width: 991px) {
             border-top: 1px solid #F5F5F5;

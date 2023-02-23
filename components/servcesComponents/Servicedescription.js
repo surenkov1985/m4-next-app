@@ -44,6 +44,16 @@ export default function ServiceDescription({ data }) {
 								{data.listTitle}
 							</h3>
 						)}
+						{data.punktsTitle && (
+							<h3
+								className={classNames(
+									styles["causes__punkt-title"],
+									"text-center w-75 mx-auto "
+								)}
+							>
+								{data.punktsTitle}
+							</h3>
+						)}
 						{data.list &&
 							data.list.map((item, index) => {
 								return (
@@ -65,6 +75,46 @@ export default function ServiceDescription({ data }) {
 												{item.text}
 											</p>
 										</div>
+									</li>
+								);
+							})}
+						{data.punkts &&
+							data.punkts.map((item, index) => {
+								return (
+									<li
+										key={index}
+										className={classNames(
+											styles["causes__punkt"],
+											styles["signboards__description-text-list"],
+											styles[item.textSize],
+											"d-flex",
+											item.size,
+											item.direction
+										)}
+									>
+										<ul className={classNames(styles["causes__punkt-list"], "d-flex flex-column justify-content-between pl-3")}>
+											{item.items.map((item, index) => {
+												return (
+													<li key={index} className={styles["causes__punkt-text"]}>
+														<p
+															className={classNames(
+																styles["causes__punkt-desc"],
+																"font-weight-light mb-0"
+																// styles[item.textSize]
+															)}
+														>
+															{item.text}
+														</p>
+													</li>
+												);
+											})}
+										</ul>
+										{/* <div className={styles["causes__item-text"]}>
+											{item.title && <h4 className={styles["causes__item-title"]}>{item.title}</h4>}
+											<p className={classNames(styles["causes__item-desc"], "font-weight-light", styles[item.textSize])}>
+												{item.text}
+											</p>
+										</div> */}
 									</li>
 								);
 							})}

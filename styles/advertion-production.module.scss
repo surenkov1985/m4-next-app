@@ -1,6 +1,5 @@
 @import "./variables.scss";
 
-
 .advertion-production {
 
     &.dark {
@@ -10,7 +9,6 @@
     &.light {
         background: #FFFFFF;
     }
-
 
     &.text-white {
 
@@ -118,8 +116,6 @@
 
         &-content {
             width: 100%;
-
-
         }
 
         &-title {
@@ -252,7 +248,6 @@
             background: #FFFFFF;
         }
 
-
         &-container {
             padding-top: 55px;
             padding-bottom: 55px;
@@ -261,8 +256,6 @@
 }
 
 .slider {
-
-
 
     &__title {
         color: #6D6D6D;
@@ -288,7 +281,6 @@
                 color: #6D6D6D;
             }
         }
-
     }
 
     &__control {
@@ -306,7 +298,6 @@
     @media screen and (max-width: 550px) {
         height: 350px;
     }
-
 }
 
 .swiper-slide {
