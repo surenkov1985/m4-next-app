@@ -99,6 +99,22 @@ import membrane from "../public/images/services/branding-transport/membrane.svg"
 import car from "../public/images/services/branding-transport/car.svg";
 import list from "../public/images/services/branding-transport/list.svg";
 
+// // Изображения страницы Живая реклама
+
+import sequinsIcon from "../public/images/services/sequins/sequins-icon.svg"
+
+import giros from "../public/images/services/sequins/giros.png";
+import dior from "../public/images/services/sequins/dior.png";
+import voda from "../public/images/services/sequins/voda.png";
+import urban from "../public/images/services/sequins/urban.png";
+
+import moneyIcon from "../public/images/services/sequins/money.svg"
+import designIcon from "../public/images/services/sequins/design.svg";
+import sunIcon from "../public/images/services/sequins/sun.svg";
+import widthIcon from "../public/images/services/sequins/width.svg";
+import colorIcon from "../public/images/services/sequins/color.svg";
+import handIcon from "../public/images/services/sequins/hand.svg";
+
 export const servicePagesData = [
 	{
 		//  Данные страницы Вывески
@@ -1568,7 +1584,7 @@ export const servicePagesData = [
 				},
 			],
 		},
-		
+
 		termsBlock: {
 			theme: "light",
 			page: "window-dressing",
@@ -1868,6 +1884,69 @@ export const servicePagesData = [
 					subText: [
 						{
 							text: `При осуществлении брендирования корпоративного транспорта допустим разного рода креатив. Помимо нанесения логотипа, стоит использовать и название компании. А если у вас начинающая и малоизвестная фирма, то и короткое описание деятельности. Можно обойтись только логотипом, но только в случае, если бренд и так узнаваем и прочно ассоциируется с графическим изображением. А вот различные слоганы, особенно на легковых авто, допустимы только в случае, если они короткие и ёмкие. Главное требование к любым надписям – они должны быть легко читаемы и понятны, чтобы привлечь взгляд даже на движущемся авто.`,
+						},
+					],
+				},
+			],
+		},
+	},
+	{
+		//  Данные страницы Живая реклама
+		id: "sequins",
+		sliderTheme: "dark",
+		titleBlock: {
+			title: "Живая реклама",
+			subTitle: " (пайетки)",
+			text: [
+				`Живая (динамическая) вывеска — инструмент внутренней и наружной рекламы. Рекламная динамическая конструкция с подвижными элементами создает потрясающий визуальный эффект даже при слабом ветре и рассеянном свете солнца днем и городском освещении ночью, привлекая таким образом внимание потенциальных покупателей.`,
+			],
+			icon: sequinsIcon,
+		},
+		descriptionBlock: {
+			page: "sequins",
+			gallery: [giros, dior, voda, urban],
+			title: "Применение панелей с пайетками",
+			button: "Оставить заявку",
+			controlText: "Срок выполнения от 5 до 10 рабочих дней.",
+			text: [
+				{
+					text: `Панели с пайетками используются для создания элементов наружной рекламы, вывесок, оформления зданий, изготовления ярких фотозон, дизайна внутренних пространств, декорирования витрин, праздничного городского оформления, мозаичных изображений, разноцветных панно и многого другого.  Для изготовления панелей с пайетками применяются только качественные материалы, прошедшие долгое тестирование в разных климатических зонах.`,
+					size: "col-lg-12 text-center",
+				},
+			],
+			punktsTitle: "Основные преимущества динамической рекламы:",
+			punkts: [
+				{
+					size: `col-lg-12`,
+					items: [
+						{
+							icon: moneyIcon,
+							text: `Низкая себестоимость`,
+						},
+						{
+							icon: designIcon,
+							text: `Разнообразный дизайн`,
+						},
+						{
+							icon: sunIcon,
+							text: `Долго не выгорает на солнце`,
+						},
+					],
+				},
+				{
+					size: `col-lg-12`,
+					items: [
+						{
+							icon: widthIcon,
+							text: `Не имеет ограничений в размере`,
+						},
+						{
+							icon: colorIcon,
+							text: `Богатая цветовая палитра`,
+						},
+						{
+							icon: handIcon,
+							text: `Простота ухода`,
 						},
 					],
 				},

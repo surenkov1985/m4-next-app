@@ -4,6 +4,66 @@
 
     &__description {
 
+        &.sequins {
+
+            & .causes {
+                &__punkt {
+
+                    &-list {
+                        display: flex;
+                        flex-direction: row;
+                        list-style: none;
+                        width: 90%;
+                        flex-wrap: wrap;
+                        column-gap: 30px;
+
+                        @media (max-width: 1200px) {
+                            width: 100%;
+                            justify-content: center;
+                        }
+
+                        @media (max-width: 768px) {
+                            width: 100%;
+                            flex-direction: column;
+                            justify-content: center;
+                        }
+
+                    }
+
+                    &-text {
+                        display: flex;
+                        flex-direction: row;
+                        column-gap: 30px;
+                        align-items: center;
+                    }
+
+                    &-desc {
+                        font-weight: 300;
+                        font-size: 24px;
+                        line-height: 30px;
+
+                        @media (max-width: 768px) {
+                            font-size: 1.25rem;
+                            font-weight: 500;
+                            line-height: 26px;
+                        }
+
+                        @media (max-width: 550px) {
+                            font-size: 1rem;
+                            font-weight: 300;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+
+            & .signboards__description-text {
+                &-list {
+                    margin-top: 30px;
+                }
+            }
+        }
+
         &-container {
             padding: 55px 40px;
 
@@ -181,11 +241,83 @@
             }
         }
     }
+
+    & .more__control {
+        margin-top: 12px;
+        row-gap: 12px;
+
+        &-text {
+            font-size: 1.125rem;
+
+            color: #565656;
+            margin-left: 30px;
+
+            @media (max-width: 768px) {
+                font-size: 1rem;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            @media (max-width: 550px) {
+                font-size: 0.875rem;
+            }
+        }
+    }
+}
+
+.more {
+
+    &__control {
+        margin-top: 50px;
+        row-gap: 12px;
+
+        &-text {
+            font-size: 1.125rem;
+
+            color: #565656;
+            margin-left: 30px;
+
+            @media (max-width: 768px) {
+                font-size: 1rem;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            @media (max-width: 550px) {
+                font-size: 0.875rem;
+            }
+        }
+    }
+
+    &__btn {
+        background: #7A7A7A;
+        font-size: 0.68rem;
+        padding: 9px 38px;
+        min-width: 277px;
+        letter-spacing: 0.08rem;
+
+        @media (max-width: 768px) {
+            min-width: 237;
+        }
+
+        @media (max-width: 550px) {
+            min-width: 197px;
+        }
+
+        &:hover {
+            background: $ButtonColor;
+        }
+    }
+
 }
 
 .causes {
 
     &__punkt {
+
+        &-list {
+            flex-direction: column;
+        }
 
         &-title {
             font-weight: 400;

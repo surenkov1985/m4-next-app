@@ -1,6 +1,44 @@
 .widescreen {
+
     &__title {
         background: #282828;
+
+        &.sequins {
+            & .title {
+                font-size: 3.125rem;
+                line-height: 59px;
+                width: 100%;
+                padding: 46px 0 46px 28px;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 2.5rem;
+                    line-height: 2.7rem;
+                    padding: 20px;
+                }
+
+                @media screen and (max-width: 550px) {
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    padding: 20px;
+                }
+            }
+        }
+
+        &-subtitle {
+            font-size: 1.75rem;
+            line-height: 45px;
+            color: #FFFFFF;
+
+            @media screen and (max-width: 768px) {
+                font-size: 1.25rem;
+                line-height: 30px;
+            }
+
+            @media screen and (max-width: 550px) {
+                font-size: 1rem;
+                line-height: 24px;
+            }
+        }
 
         &-icon svg {
             width: 115px;

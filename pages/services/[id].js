@@ -19,7 +19,7 @@ export default function flyers(props) {
 
 	return (
 		<MainLayout>
-			<ServiceTitle title={data?.titleBlock.title} text={data?.titleBlock.text} icon={data?.titleBlock.icon} />
+			<ServiceTitle id={data?.id} title={data?.titleBlock.title} text={data?.titleBlock.text} icon={data?.titleBlock.icon} subTitle={data?.titleBlock.subTitle} />
 			{data?.bannersBlock && <ServiceBanners data={data.bannersBlock} />}
 			{data?.descriptionBlock && <ServiceDescription data={data?.descriptionBlock} />}
 			{data?.causesBlock && <ServiceCauses data={data.causesBlock} />}

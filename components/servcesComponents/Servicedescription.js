@@ -5,7 +5,7 @@ import styles from "../../styles/serviceStyles/description.module.scss";
 
 export default function ServiceDescription({ data }) {
 	return (
-		<section className={styles["signboards__description"]}>
+		<section className={classNames(styles["signboards__description"], styles[data.page])}>
 			<div className={classNames(styles["signboards__description-container"], "container")}>
 				{data.gallery && (
 					<ul className={classNames(styles["signboards__images"], "row mx-0")}>
@@ -45,14 +45,7 @@ export default function ServiceDescription({ data }) {
 							</h3>
 						)}
 						{data.punktsTitle && (
-							<h3
-								className={classNames(
-									styles["causes__punkt-title"],
-									"text-center w-75 mx-auto "
-								)}
-							>
-								{data.punktsTitle}
-							</h3>
+							<h3 className={classNames(styles["causes__punkt-title"], "text-center w-75 mx-auto ")}>{data.punktsTitle}</h3>
 						)}
 						{data.list &&
 							data.list.map((item, index) => {
@@ -92,33 +85,35 @@ export default function ServiceDescription({ data }) {
 											item.direction
 										)}
 									>
-										<ul className={classNames(styles["causes__punkt-list"], "d-flex flex-column justify-content-between pl-3")}>
+										<ul className={classNames(styles["causes__punkt-list"], "d-flex  pl-3 mx-auto")}>
 											{item.items.map((item, index) => {
 												return (
 													<li key={index} className={styles["causes__punkt-text"]}>
-														<p
-															className={classNames(
-																styles["causes__punkt-desc"],
-																"font-weight-light mb-0"
-																// styles[item.textSize]
-															)}
-														>
+														{item.icon && <Image src={item.icon} alt={"icon"} />}
+														<p className={classNames(styles["causes__punkt-desc"], "font-weight-light mb-0")}>
 															{item.text}
 														</p>
 													</li>
 												);
 											})}
 										</ul>
-										{/* <div className={styles["causes__item-text"]}>
-											{item.title && <h4 className={styles["causes__item-title"]}>{item.title}</h4>}
-											<p className={classNames(styles["causes__item-desc"], "font-weight-light", styles[item.textSize])}>
-												{item.text}
-											</p>
-										</div> */}
 									</li>
 								);
 							})}
 					</ul>
+					{data.button && (
+						<div
+							className={classNames(
+								styles["more__control"],
+								"d-flex flex-column flex-lg-row align-items-center justify-content-center"
+							)}
+						>
+							<button className={classNames(styles["more__btn"], "btn btn-sm text-uppercase rounded-pill text-white ")}>
+								{data.button}
+							</button>
+							{data.controlText && <p className={classNames(styles["more__control-text"], "text-center my-0")}>{data.controlText}</p>}
+						</div>
+					)}
 				</div>
 			</div>
 		</section>
