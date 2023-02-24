@@ -86,7 +86,9 @@ export default function ServiceMore({ data }) {
 									})}
 								{item.list && (
 									<>
-										<h3 className={classNames(styles["more__plus-list-title"], "text-center")}>{item.list.title}</h3>
+										{item.list.title && (
+											<h3 className={classNames(styles["more__plus-list-title"], "text-center")}>{item.list.title}</h3>
+										)}
 										{item.list.items && (
 											<ul
 												className={classNames(
@@ -117,6 +119,53 @@ export default function ServiceMore({ data }) {
 										{item.list.text && <li className={classNames(styles["more__plus-list"], "text-center")}>{item.list.text}</li>}
 									</>
 								)}
+								{item.punkts &&
+									item.punkts.map((item, index) => {
+										return (
+											<li
+												key={index}
+												className={classNames(
+													styles["more__plus-list"],
+													styles["signboards__description-text-list"],
+
+													"d-flex",
+													item.direction
+												)}
+											>
+												<ul className={classNames(styles["more__plus-list"],  "d-flex mb-0 mx-auto")}>
+													{item.items.map((item, index) => {
+														return (
+															<li
+																key={index}
+																className={classNames(styles["causes__punkt-text"], styles[item.size], "d-flex")}
+															>
+																{item.marker && <p></p>}
+																{item.icon && <Image src={item.icon} className={"mr-3 mr-lg-4"} alt={"icon"} />}
+																<div>
+																	{item.marker && (
+																		<div
+																			className={classNames(
+																				styles["causes__punkt-marker"],
+																				"my-0 mr-4 float-left"
+																			)}
+																		></div>
+																	)}
+																	{item.title && (
+																		<p className={classNames(styles["more__plus-title"], "my-0")}>
+																			{item.title}
+																		</p>
+																	)}
+																	<p className={classNames(styles["causes__punkt-desc"], "font-weight-light mb-0")}>
+																		{item.text}
+																	</p>
+																</div>
+															</li>
+														);
+													})}
+												</ul>
+											</li>
+										);
+									})}
 								{item.subText &&
 									item?.subText?.map((text, index) => {
 										return (

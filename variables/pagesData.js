@@ -101,14 +101,14 @@ import list from "../public/images/services/branding-transport/list.svg";
 
 // // Изображения страницы Живая реклама
 
-import sequinsIcon from "../public/images/services/sequins/sequins-icon.svg"
+import sequinsIcon from "../public/images/services/sequins/sequins-icon.svg";
 
 import giros from "../public/images/services/sequins/giros.png";
 import dior from "../public/images/services/sequins/dior.png";
 import voda from "../public/images/services/sequins/voda.png";
 import urban from "../public/images/services/sequins/urban.png";
 
-import moneyIcon from "../public/images/services/sequins/money.svg"
+import moneyIcon from "../public/images/services/sequins/money.svg";
 import designIcon from "../public/images/services/sequins/design.svg";
 import sunIcon from "../public/images/services/sequins/sun.svg";
 import sizeIcon from "../public/images/services/sequins/size.svg";
@@ -130,6 +130,30 @@ import inscriptionIcon from "../public/images/services/stands/inscription.svg";
 import widthIcon from "../public/images/services/stands/width.svg";
 import pocketsIcon from "../public/images/services/stands/pockets.svg";
 import framesIcon from "../public/images/services/stands/frames.svg";
+
+// // Изображения страницы Таблички
+
+import tablesIcon from "../public/images/services/tables/tables-icon.svg";
+
+import railTables from "../public/images/services/tables/rail-tables.png";
+import numbTables from "../public/images/services/tables/numb-tables.png";
+import changeTables from "../public/images/services/tables/change-tables.png";
+import suspendedTables from "../public/images/services/tables/suspended-tables.png";
+
+import wcTable from "../public/images/services/tables/wc-table.svg";
+import waitHallTable from "../public/images/services/tables/wait-hall-table.svg";
+import foodcortTable from "../public/images/services/tables/foodcort-table.svg";
+import registerTable from "../public/images/services/tables/register-table.svg";
+import aeroexpressTable from "../public/images/services/tables/aeroexpress-table.svg";
+import departTable from "../public/images/services/tables/depart-table.svg";
+import navigationTable from "../public/images/services/tables/navigation-table.svg";
+
+import compasIcon from "../public/images/services/tables/compas.svg"
+
+import separateTables from "../public/images/services/tables/separate-tables.svg";
+import streetTable from "../public/images/services/tables/street-tables.svg";
+import combiTable from "../public/images/services/tables/combi-tables.svg";
+import roomTable from "../public/images/services/tables/room-tables.svg";
 
 export const servicePagesData = [
 	{
@@ -2035,5 +2059,160 @@ export const servicePagesData = [
 				},
 			],
 		},
+	},
+	{
+		//  Данные страницы Таблички
+		id: "tables",
+		sliderTheme: "dark",
+		titleBlock: {
+			title: "Таблички",
+			text: [
+				`По сравнению с другими, более яркими и масштабными рекламоносителями, таблички выглядят скромно и лаконично и выполняют, на первый взгляд, исключительно «прикладную» функцию – информируют посетителей о профиле деятельности компании, режиме её работы, локализации специалистов и т.п.`,
+			],
+			icon: tablesIcon,
+		},
+		descriptionBlock: {
+			page: "tables",
+			gallery: [railTables, numbTables, changeTables, suspendedTables],
+			title: "Выбор материала и технологии изготовления",
+			// button: "Оставить заявку",
+			// controlText: "Срок выполнения от 5 до 10 рабочих дней.",
+			// text: [
+			// 	{
+			// 		text: `Панели с пайетками используются для создания элементов наружной рекламы, вывесок, оформления зданий, изготовления ярких фотозон, дизайна внутренних пространств, декорирования витрин, праздничного городского оформления, мозаичных изображений, разноцветных панно и многого другого.  Для изготовления панелей с пайетками применяются только качественные материалы, прошедшие долгое тестирование в разных климатических зонах.`,
+			// 		size: "col-lg-12 text-center",
+			// 	},
+			// ],
+			punkts: [
+				{
+					size: `col-lg-12`,
+					items: [
+						{
+							// icon: materialsIcon,
+							// title: "Материалы",
+							marker: true,
+							text: `Офисные и фасадные таблички можно смело назвать «малыми формами» наружной рекламы, что, впрочем, нисколько не умаляет их значения в формировании имиджа компании или предприятия.`,
+						},
+						{
+							// icon: uvPrintIcon,
+							// title: "УФ печать и плёнка",
+							marker: true,
+							text: `Стильные, выполненные с хорошим вкусом и с применением качественных материалов таблички формируют у потенциальных партнёров и клиентов благоприятное впечатление об организации. Небрежные или, наоборот, не к месту вычурные - вызывают сомнения и лёгкое недоверие к персоналу и руководству компании. Вопрос доверия обостряется при полном отсутствии вывески, - «анонимный» бизнес всегда подозрителен.`,
+						},
+						{
+							// icon: inscriptionIcon,
+							// title: "Надписи",
+							marker: true,
+							text: `Место дислокации офисной таблички определяется прочностью и долговечностью исходного материала, его способностью противостоять агрессивному воздействию окружающей среды. По этим параметрам металлические таблички находятся вне конкуренции, поэтому чаще всего именно их используют на фасадах.`,
+						},
+					],
+				},
+				// {
+				// 	size: `col-lg-6`,
+				// 	items: [
+				// 		{
+				// 			icon: widthIcon,
+				// 			title: "Толщина",
+				// 			text: `Толщина стенда зависит от места расположения, пожеланий клиента и других факторов. Чаще изготавливают из ПВХ толщиной от 3 до 8 мм. Такая толщина оптимальна — стенд надежный и крепкий, но при этом не тяжелый.`,
+				// 		},
+				// 		{
+				// 			icon: pocketsIcon,
+				// 			title: "Карманы",
+				// 			text: `Карманы для сменной информации изготавливают из оргстекла или прозрачного пластика. Стандартный размер кармашка — формат А4. По желанию клиента мы изготовим карман нужного размера и конфигурации.`,
+				// 		},
+				// 		{
+				// 			icon: framesIcon,
+				// 			title: "Рамки и крепления",
+				// 			text: `Для укрепления торцов стенда применяется рамка из алюминиевого профиля. К рамкам крепятся подвесы для настенных стендов, а также стойки-ножки для переносных стендов.`,
+				// 		},
+				// 	],
+				// },
+			],
+		},
+		presentationBlock: {
+			theme: "dark",
+			page: "tables",
+			icon: false,
+			description: [
+				{
+					icons: [
+						{ icon: wcTable, name: "wc" },
+						{ icon: waitHallTable, name: "wait" },
+						{ icon: foodcortTable, name: "food" },
+						{ icon: registerTable, name: "reg" },
+						{ icon: aeroexpressTable, name: "aero" },
+						{ icon: departTable, name: "depart" },
+						{ icon: navigationTable, name: "nav" },
+					],
+					colSize: "col-lg-12 col-xl-5",
+				},
+				{
+					icon: compasIcon,
+					title: `Навигационные таблички`,
+					text: [
+						`Эти элементы выполняют функцию указателей, помогая сориентироваться и позволяя двигаться в правильном направлении человеку, который оказался где-то впервые – в жилом комплексе или гипермаркете, спортивном или развлекательном центре, медицинской клинике, на вокзале, в аэропорту, на стадионе, в кинотеатре или в концертном зале. Навигационные таблички и указатели – неотъемлемый элемент оформления столь масштабных объектов: без них возможности нового посетителя самостоятельно определить направление своего движения и быстро найти нужный офис, магазин, квартиру или другое помещение минимальны!`,
+					],
+					// button: "Оставить заявку",
+					// direction: "flex-lg-row-reverse ml-lg-auto m",
+					// controlText: "Срок выполнения от 5 до 10 рабочих дней.",
+					colSize: "col-lg-12 col-xl-7",
+				},
+			],
+		},
+		moreBlock: {
+			theme: "light",
+			page: "tables",
+			icon: null,
+			title: `Виды навигационных табличек`,
+			description: [
+				{
+					text: [
+						`Навигационные таблички и указатели можно классифицировать как по объему нанесенной на них информации, так и по месту расположения.`,
+					],
+					colSize: "col-12",
+				},
+				{
+					punkts: [
+						{
+							size: `col-6`,
+							items: [
+								{
+									icon: separateTables,
+									title: "Отдельные",
+									text: `Как правило, их размеры сравнительно невелики. Содержат необходимый минимум данных, например, номер этажа или офиса;`,
+									size: `col-6`,
+								},
+								{
+									icon: streetTable,
+									title: "Для улицы",
+									text: `Как правило, изготовлены из металла. Характеризуются прочностью и долговечностью, устойчивы к УФ-лучам, сырости и перепадам температуры воздуха, не подвержены коррозии.`,
+									size: `col-6`,
+								},
+							],
+						},
+						{
+							size: `col-6`,
+							items: [
+								{
+									icon: combiTable,
+									title: "Комбинированные",
+									text: `На них указано направление движения к нескольким объектам, например, эскалаторуи или лифту. Зачастую оснащаются подсветкой из светодиодов.`,
+									size: `col-6`,
+								},
+								{
+									icon: roomTable,
+									title: "Для помещений",
+									text: `Благодаря меньшему воздействию на них окружающей среды, могут быть более разнообразными в применении материалов, например металлическими, стеклянными, пластиковыми, акриловыми и т.д.`,
+									size: `col-6`,
+								},
+							],
+						},
+					],
+
+					colSize: "col-12",
+				},
+			],
+		},
+		requestBlock: true,
 	},
 ];

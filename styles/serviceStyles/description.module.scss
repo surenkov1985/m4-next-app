@@ -65,6 +65,7 @@
         }
 
         &.stands {
+
             & .causes {
                 &__punkt {
 
@@ -138,6 +139,50 @@
                             font-size: 1rem;
                             font-weight: 300;
                             line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.tables {
+
+            & .causes {
+                &__punkt {
+                    margin-top: 0;
+
+                    &-text {
+                        list-style: none;
+                    }
+                    &-desc {
+                        font-weight: 300;
+                        font-size: 20px;
+                        line-height: 38px;
+
+                        @media (max-width: 768px) {
+                            font-size: 1.125rem;
+                            font-weight: 300;
+                            line-height: 26px;
+                        }
+
+                        @media (max-width: 550px) {
+                            font-size: 1rem;
+                            font-weight: 300;
+                            line-height: 24px;
+                        }
+                        
+                    }
+                    &-marker {
+                        height: 30px;
+                        border-left: 14px solid $ButtonColor;
+
+                        @media (max-width: 768px) {
+                            height: 25px;
+                        }
+
+                        @media (max-width: 550px) {
+                            height: 20px;
+                            border-width: 10px;
                         }
                     }
                 }

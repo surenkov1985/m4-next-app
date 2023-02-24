@@ -1,226 +1,126 @@
 @import "../variables.scss";
 
-.more {
+.present {
 
     &.dark {
         background: #414141;
 
-        & .more {
-            &__text {
-                color: #FFFFFF;
-            }
+        & .present__text {
+            color: #FFFFFF;
+        }
 
-            &__control-text {
-                color: #FFFFFF;
-            }
-
-            &__plus {
-
-            }
+        & .present__control-text {
+            color: #FFFFFF;
         }
     }
 
     &.light {
         background: #FFFFFF;
-
-        & .more {
-
-            &__plus {
-
-                &-title {
-                    color: #373737;
-                }
-
-                &-list {
-                    color: #797979;
-                }
-            }
-        }
-    }
-
-    &.pilons {
-
-        & .more__title {
-            font-size: 50px;
-            line-height: 52px;
-            color: #FFFFFF;
-            font-weight: 500;
-
-            &::after {
-                border-color: $ButtonColor;
-                width: 330px;
-                left: calc(50% - 165px);
-            }
-
-            @media (max-width: 768px) {
-                font-size: 2.25rem;
-                line-height: 30px;
-            }
-
-            @media (max-width: 550px) {
-                color: $ButtonColor;
-                font-size: 1.25rem;
-                line-height: 24px;
-            }
-        }
-
-        & .more__plus-list {
-            list-style-type: none;
-            column-gap: 0px;
-
-            & li {
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-        }
-
-        & .more__col {
-            padding-left: 0;
-            padding-right: 0;
-        }
     }
 
     &.branding-transport {
 
-        & .more {
-            &__title {
-                font-weight: 300;
+        & .present__plus-list {
+            flex-direction: row;
+            list-style: none;
+            width: 90%;
+            column-gap: 90px;
+            row-gap: 35px;
+
+            &-item {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            @media (max-width: 1300px) {
+                column-gap: 50px;
+                width: 100%;
+            }
+
+            @media (max-width: 1200px) {
+                column-gap: 30px;
+            }
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            &-title {
+                text-align: center;
+                width: 100%;
+                font-weight: 500;
                 font-size: 50px;
                 line-height: 52px;
-                color: #565656;
+                color: $ButtonColor;
 
-                &::after {
-                    width: 410px;
-                    left: calc(50% - 205px);
+                @media (max-width: 768px) {
+                    font-weight: 500;
+                    font-size: 40px;
+                    line-height: 46px;
+                }
+
+                @media (max-width: 550px) {
+                    font-size: 30px;
+                    line-height: 26px;
                 }
             }
 
-            &__plus {
+            & img {
+                width: 80px;
+                margin-right: 20px;
 
-                &-title {
-                    font-weight: 400;
-                    font-size: 32px;
-                    line-height: 32px;
-                    color: #797979;
-                    border-left: 14px solid $ButtonColor;
-                    padding: 0 20px;
+                @media (max-width: 768px) {
+                    width: 70px;
                 }
 
-                &-list {
-                    color: #565656;
-                    column-gap: 0;
-                    font-size: 1.125rem;
-                    list-style: none;
-                    padding: 0 10px;
-                    align-items: flex-start;
-
-                    &-title {
-                        font-size: 1.25rem;
-                        color: #565656;
-                        font-weight: 500;
-                    }
+                @media (max-width: 550px) {
+                    width: 60px;
                 }
             }
         }
     }
 
     &.tables {
-        & .more {
 
-            &__col {
-                padding: 0;
-            }
-            &__title {
-                font-weight: 300;
-                font-size: 44px;
-                line-height: 52px;
-                color: #565656;
-
-                @media (max-width: 768px) {
-                    font-size: 2.25rem;
-                    line-height: 30px;
-                }
-
-                @media (max-width: 550px) {
-                    color: $ButtonColor;
-                    font-size: 1.25rem;
-                    line-height: 24px;
-                }
-            }
-
-            &__plus {
-                &-list {
-                    list-style: none ;
-                    column-gap: 20px;
-                    // padding: 0 10px;
-                    font-size: 1.25rem;
-                    line-height: 38px;
-                    align-items: flex-start;
-                    padding: 0;
-
-                    @media (max-width: 768px) {
-                        font-size: 1.125rem;
-                        line-height: 30px;
-                    }
-
-                    @media (max-width: 550px) {
-                        color: $ButtonColor;
-                        font-size: 1rem;
-                        line-height: 24px;
-                    }
-                }
-
-                &-title {
-                    color: #797979;
-                    font-weight: 900;
-                    font-size: 30px;
-                    line-height: 28px;
-
-                    @media (max-width: 768px) {
-                        font-size: 1.5rem;
-                    }
-
-                    @media (max-width: 550px) {
-                        color: $ButtonColor;
-                        font-size: 1.25rem;
-                    }
-                }
-            }
-        }
-    }
-
-    &__title {
-        font-size: 2.25rem;
-        color: $ButtonColor;
-        position: relative;
-        font-weight: 300;
-        font-size: 36px;
-        line-height: 38px;
-
-        @media (max-width: 768px) {
-            font-size: 2rem;
-            font-weight: 500;
-            line-height: 30px;
-        }
-
-        @media (max-width: 550px) {
-            font-size: 1.625rem;
+        & .present__title {
+            color: #FFFFFF;
             font-weight: 300;
-            line-height: 26px;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            width: 500px;
-            height: 2px;
-            border: 1px solid #c7c7c7;
-            bottom: -20px;
-            left: calc(50% - 250px);
+            font-size: 44px;
+            line-height: 64px;
 
             @media (max-width: 768px) {
-                width: 308px;
-                left: calc(50% - 154px);
+                font-size: 36px;
+                line-height: 47px;
+
+            }
+
+            @media (max-width: 550px) {
+                font-size: 22px;
+                line-height: 26px;
+            }
+
+            &-container {
+                margin-bottom: 30px;
+
+                @media (max-width: 1200px) {
+                    margin-top: 30px;
+                }
+
+                & img {
+                    margin-right: 30px;
+
+                    @media (max-width: 768px) {
+                        width: 55px;
+
+                    }
+
+                    @media (max-width: 550px) {
+                        width: 40px;
+                        margin-right: 10px;
+                    }
+                }
             }
         }
     }
@@ -253,6 +153,36 @@
         }
     }
 
+    &__images {
+
+        &-list {
+            display: grid;
+            grid-template-areas:
+                "wc wait food reg"
+                "wc wait food reg"
+                "aero aero nav nav"
+                "depart depart nav nav";
+            grid-gap: 10px;
+            align-items: center;
+
+            @media (max-width: 1200px) {
+                grid-template-areas: "wc wait food reg nav nav"
+                    "wc wait food reg nav nav"
+                    ". aero aero depart depart .";
+            }
+
+            @media (max-width: 768px) {
+                grid-template-areas:
+                    "aero aero ."
+                    "wc wait food"
+                    "wc wait food"
+                    "nav nav reg"
+                    "nav nav reg"
+                    ". depart depart";
+            }
+        }
+    }
+
     &__important {
         width: 274px;
         height: 274px;
@@ -280,7 +210,6 @@
     &__row {
         margin-left: 0;
         margin-right: 0;
-        margin-top: 47px;
 
         &.signboard {
             width: 90%;
@@ -290,7 +219,6 @@
                 width: 100%;
                 margin-left: 0;
                 margin-right: 0;
-                margin-top: 37px;
             }
         }
 
@@ -318,12 +246,25 @@
         }
     }
 
+    &__title {
+        font-size: 40px;
+        line-height: 58px;
+        color: $ButtonColor;
+
+        @media (max-width: 768px) {
+            font-size: 30px;
+        }
+
+        @media (max-width: 550px) {
+            font-size: 20px;
+        }
+    }
+
     &__text {
         font-size: 20px;
         margin-top: 20px;
         line-height: 34px;
         color: #565656;
-        font-weight: 300;
 
         @media (max-width: 768px) {
             font-size: 16px;
@@ -357,100 +298,89 @@
                 height: 152px;
             }
         }
+
+        // & img {
+        //     width: 180px;
+
+        //     @media (max-width: 768px) {
+        //         width: 160px;
+        //     }
+
+        //     @media (max-width: 550px) {
+        //         width: 128px;
+        //     }
+        // }
     }
 
     &__plus {
 
         &-title {
-            font-size: 28px;
-            line-height: 38px;
-            font-weight: 500;
+            font-size: 50px;
+            line-height: 52px;
+            font-weight: 300;
             color: #FFFFFF;
-
-            @media (max-width: 768px) {
-                font-size: 24px;
-            }
+            margin-bottom: 65px;
         }
 
         &-list {
-            list-style: decimal;
-            column-gap: 95px;
+            list-style: disc;
             color: #FFFFFF;
             font-size: 1.25rem;
             line-height: 38px;
             font-weight: 300;
-            margin-top: 30px;
+            margin-bottom: 40px;
             letter-spacing: 0.05rem;
-            flex-wrap: wrap;
-            align-items: center;
-            flex: 0 1 auto;
+            flex-direction: column;
 
-            @media (max-width: 768px) {
-                font-size: 1rem;
-                line-height: 30px;
-            }
+            &-item {
+                color: #FFFFFF;
+                font-size: 1.25rem;
+                line-height: 38px;
+                font-weight: 300;
+                letter-spacing: 0.05rem;
 
-            & .col-12 {
-                width: 100%;
-
-                @media (min-width: 768px) {
-                    width: 50%
+                @media (max-width: 768px) {
+                    font-weight: 400;
+                    font-size: 1rem;
+                    line-height: 26px;
                 }
 
-                @media (min-width: 1200px) {
-                    width: 33.3%
-                }
-            }
-
-            & .col-6 {
-                width: calc(50% - 10px);
-
-                @media (max-width: 991px) {
-                    width: 100%
+                @media (max-width: 550px) {
+                    font-size: 0.875rem;
+                    line-height: 26px;
                 }
             }
 
             &-title {
-                font-weight: 300;
                 font-size: 1.5rem;
-                line-height: 40px;
-                color: $ButtonColor;
+                font-weight: 500;
+                color: #FFFFFF;
+                line-height: 38px;
+                margin-bottom: 40px;
 
                 @media (max-width: 768px) {
+                    font-weight: 400;
                     font-size: 1.25rem;
-                    line-height: 30px;
+                    line-height: 26px;
                 }
 
                 @media (max-width: 550px) {
-                    font-size: 1.25rem;
-                    line-height: 28px;
+                    font-size: 1.125rem;
+                    line-height: 26px;
                 }
             }
-        }
-    }
-    
-
-    & .col-12 {
-        width: 100%;
-
-        @media (min-width: 768px) {
-            width: 50%
-        }
-
-        @media (min-width: 1200px) {
-            width: 33.3%
         }
     }
 
     &__control {
         margin-top: 12px;
         row-gap: 12px;
+        column-gap: 30px;
 
         &-text {
             font-size: 1.125rem;
 
             color: #565656;
-            margin-left: 30px;
 
             @media (max-width: 768px) {
                 font-size: 1rem;
@@ -486,7 +416,6 @@
 }
 
 .causes {
-
 
     &__item {
         column-gap: 20px;

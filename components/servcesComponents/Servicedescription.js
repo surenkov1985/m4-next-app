@@ -89,12 +89,12 @@ export default function ServiceDescription({ data }) {
 											{item.items.map((item, index) => {
 												return (
 													<li key={index} className={styles["causes__punkt-text"]}>
+														{item.marker && <p></p>}
 														{item.icon && <Image src={item.icon} alt={"icon"} />}
 														<div>
+															{item.marker && <div className={classNames(styles["causes__punkt-marker"], "my-0 mr-4 float-left")}></div>}
 															{item.title && (
-																<p className={classNames(styles["causes__punkt-title"], "my-0")}>
-																	{item.title}
-																</p>
+																<p className={classNames(styles["causes__punkt-title"], "my-0")}>{item.title}</p>
 															)}
 															<p className={classNames(styles["causes__punkt-desc"], "font-weight-light mb-0")}>
 																{item.text}
