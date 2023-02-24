@@ -1,0 +1,91 @@
+@import "../variables.scss";
+
+.info {
+
+    &.dark {
+        background: #414141;
+
+        & .info {
+
+            &__title {
+                color: #FFFFFF;
+            }
+
+            &__button {
+                color: #FFFFFF;
+                border-color: #FFFFFF;
+                &:hover {
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+
+    &.light {
+        background: #FFFFFF;
+
+        & .info {
+
+            &__title {
+                color: #797979;
+            }
+
+            &__button {
+                color: #797979;
+                border-color: #797979;
+                &:hover {
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+
+    &__container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 64px;
+
+        &-container {
+            column-gap: 30px;
+
+            @media (max-width: 768px) {
+                column-gap: 20px;
+            }
+
+            @media (max-width: 768px) {
+                column-gap: 10px;
+            }
+
+            & img {
+                width: 53px;
+
+                @media (max-width: 768px) {
+                    width: 40px;
+                }
+
+                @media (max-width: 768px) {
+                    width: 30px;
+                }
+            }
+        }
+    }
+
+    &__button {
+        font-size: 11px;
+        line-height: 26px;
+        letter-spacing: 0.12em;
+        padding: 3px 27px;
+        background: none;
+        box-shadow: none;
+        left: calc(100% + 18px);
+
+        &:hover {
+            color: #FFFFFF;
+        }
+    }
+}

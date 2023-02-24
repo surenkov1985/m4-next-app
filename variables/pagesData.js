@@ -148,12 +148,26 @@ import aeroexpressTable from "../public/images/services/tables/aeroexpress-table
 import departTable from "../public/images/services/tables/depart-table.svg";
 import navigationTable from "../public/images/services/tables/navigation-table.svg";
 
-import compasIcon from "../public/images/services/tables/compas.svg"
+import compasIcon from "../public/images/services/tables/compas.svg";
 
 import separateTables from "../public/images/services/tables/separate-tables.svg";
 import streetTable from "../public/images/services/tables/street-tables.svg";
 import combiTable from "../public/images/services/tables/combi-tables.svg";
 import roomTable from "../public/images/services/tables/room-tables.svg";
+
+// // Изображения страницы Тонкие световые панели
+
+import slimPanelIcon from "../public/images/services/slim-panels/slim-panels-icon.svg";
+
+import paintPanel from "../public/images/services/slim-panels/paint-panel.png";
+import posterPanel from "../public/images/services/slim-panels/poster-panel.png";
+import menuPanel from "../public/images/services/slim-panels/menu-panel.png";
+import galleryPanel from "../public/images/services/slim-panels/gallery-panel.png";
+
+import cristallIcon from "../public/images/services/slim-panels/cristall-icon.svg";
+import frameIcon from "../public/images/services/slim-panels/frame-icon.svg";
+import magnetIcon from "../public/images/services/slim-panels/magnet-icon.svg";
+import streetIcon from "../public/images/services/slim-panels/street-icon.svg";
 
 export const servicePagesData = [
 	{
@@ -2214,5 +2228,145 @@ export const servicePagesData = [
 			],
 		},
 		requestBlock: true,
+	},
+	{
+		//  Данные страницы Тонкие световые панели
+		id: "slim-panels",
+		sliderTheme: "dark",
+		titleBlock: {
+			title: "Тонкие световые панели",
+			text: [
+				`Данный тип рекламы предназначены для оформления магазинов, салонов, кинотеатров, а также различных точек продаж. Чаще всего, изготавливаются из акрилового стекла. В качестве подсветки используются светодиодные линейки, которые расположены по краям светорассеивающей матрицы. Благодаря особому способу производства матриц панели светят ярко и равномерно при толщине всего около 12 мм.`,
+			],
+			icon: slimPanelIcon,
+		},
+		descriptionBlock: {
+			page: "slim-panels",
+			gallery: [paintPanel, posterPanel, menuPanel, galleryPanel],
+			title: "Особенности световых панелей для рекламы",
+			text: [
+				{
+					text: `Световые панели являются наиболее распространенным элементом внутренней и наружной световой рекламы. Подобные конструкции отлично зарекомендовали себя на рынке рекламных материалов и доказали свою эффективность.`,
+					size: "col-lg-12 text-center",
+				},
+				{
+					text: `Как правило, световая панель представляет собой повсеместно освещенный короб, изготовленный по специальной технологии с применением определенных материалов, обеспечивающих функциональные возможности каждой конкретной модели.`,
+					size: "col-lg-12 text-center",
+				},
+			],
+		},
+		infoBlock: {
+			list: [
+				{
+					title: "Кристалайт",
+					theme: "dark",
+					name: "cristal",
+					icon: cristallIcon,
+				},
+				{
+					title: "Фреймлайт",
+					theme: "light",
+					name: "frame",
+					icon: frameIcon,
+				},
+				{
+					title: "Магнетик",
+					theme: "dark",
+					name: "magnet",
+					icon: magnetIcon,
+				},
+				{
+					title: "Уличные световые панели",
+					theme: "light",
+					name: "street",
+					icon: streetIcon,
+				},
+			],
+		},
+		// presentationBlock: {
+		// 	theme: "dark",
+		// 	page: "slim-panels",
+		// 	icon: false,
+		// 	description: [
+		// 		{
+		// 			icons: [
+		// 				{ icon: wcTable, name: "wc" },
+		// 				{ icon: waitHallTable, name: "wait" },
+		// 				{ icon: foodcortTable, name: "food" },
+		// 				{ icon: registerTable, name: "reg" },
+		// 				{ icon: aeroexpressTable, name: "aero" },
+		// 				{ icon: departTable, name: "depart" },
+		// 				{ icon: navigationTable, name: "nav" },
+		// 			],
+		// 			colSize: "col-lg-12 col-xl-5",
+		// 		},
+		// 		{
+		// 			icon: compasIcon,
+		// 			title: `Навигационные таблички`,
+		// 			text: [
+		// 				`Эти элементы выполняют функцию указателей, помогая сориентироваться и позволяя двигаться в правильном направлении человеку, который оказался где-то впервые – в жилом комплексе или гипермаркете, спортивном или развлекательном центре, медицинской клинике, на вокзале, в аэропорту, на стадионе, в кинотеатре или в концертном зале. Навигационные таблички и указатели – неотъемлемый элемент оформления столь масштабных объектов: без них возможности нового посетителя самостоятельно определить направление своего движения и быстро найти нужный офис, магазин, квартиру или другое помещение минимальны!`,
+		// 			],
+		// 			// button: "Оставить заявку",
+		// 			// direction: "flex-lg-row-reverse ml-lg-auto m",
+		// 			// controlText: "Срок выполнения от 5 до 10 рабочих дней.",
+		// 			colSize: "col-lg-12 col-xl-7",
+		// 		},
+		// 	],
+		// },
+		// moreBlock: {
+		// 	theme: "light",
+		// 	page: "tables",
+		// 	icon: null,
+		// 	title: `Виды навигационных табличек`,
+		// 	description: [
+		// 		{
+		// 			text: [
+		// 				`Навигационные таблички и указатели можно классифицировать как по объему нанесенной на них информации, так и по месту расположения.`,
+		// 			],
+		// 			colSize: "col-12",
+		// 		},
+		// 		{
+		// 			punkts: [
+		// 				{
+		// 					size: `col-6`,
+		// 					items: [
+		// 						{
+		// 							icon: separateTables,
+		// 							title: "Отдельные",
+		// 							text: `Как правило, их размеры сравнительно невелики. Содержат необходимый минимум данных, например, номер этажа или офиса;`,
+		// 							size: `col-6`,
+		// 						},
+		// 						{
+		// 							icon: streetTable,
+		// 							title: "Для улицы",
+		// 							text: `Как правило, изготовлены из металла. Характеризуются прочностью и долговечностью, устойчивы к УФ-лучам, сырости и перепадам температуры воздуха, не подвержены коррозии.`,
+		// 							size: `col-6`,
+		// 						},
+		// 					],
+		// 				},
+		// 				{
+		// 					size: `col-6`,
+		// 					items: [
+		// 						{
+		// 							icon: combiTable,
+		// 							title: "Комбинированные",
+		// 							text: `На них указано направление движения к нескольким объектам, например, эскалаторуи или лифту. Зачастую оснащаются подсветкой из светодиодов.`,
+		// 							size: `col-6`,
+		// 						},
+		// 						{
+		// 							icon: roomTable,
+		// 							title: "Для помещений",
+		// 							text: `Благодаря меньшему воздействию на них окружающей среды, могут быть более разнообразными в применении материалов, например металлическими, стеклянными, пластиковыми, акриловыми и т.д.`,
+		// 							size: `col-6`,
+		// 						},
+		// 					],
+		// 				},
+		// 			],
+
+		// 			colSize: "col-12",
+		// 		},
+		// 	],
+		// },
+		// requestBlock: true,
 	},
 ];
