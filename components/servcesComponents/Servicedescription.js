@@ -80,7 +80,7 @@ export default function ServiceDescription({ data }) {
 											styles["causes__punkt"],
 											styles["signboards__description-text-list"],
 											styles[item.textSize],
-											"d-flex",
+											"d-flex mt-3",
 											item.size,
 											item.direction
 										)}
@@ -88,11 +88,15 @@ export default function ServiceDescription({ data }) {
 										<ul className={classNames(styles["causes__punkt-list"], "d-flex  pl-3 mx-auto")}>
 											{item.items.map((item, index) => {
 												return (
-													<li key={index} className={styles["causes__punkt-text"]}>
+													<li key={index} className={classNames(styles["causes__punkt-text"], item.align)}>
 														{item.marker && <p></p>}
 														{item.icon && <Image src={item.icon} alt={"icon"} />}
 														<div>
-															{item.marker && <div className={classNames(styles["causes__punkt-marker"], "my-0 mr-4 float-left")}></div>}
+															{item.marker && (
+																<div
+																	className={classNames(styles["causes__punkt-marker"], "my-0 mr-4 float-left")}
+																></div>
+															)}
 															{item.title && (
 																<p className={classNames(styles["causes__punkt-title"], "my-0")}>{item.title}</p>
 															)}
@@ -107,12 +111,21 @@ export default function ServiceDescription({ data }) {
 									</li>
 								);
 							})}
+						{data.subText &&
+							data.subText.map((item, index) => {
+								return (
+									<li key={index} className={classNames(styles["banners__item"], styles["banner"], "col-12", item.size)}>
+										<p className={styles["signboards__description-text"]}>{item.text}</p>
+									</li>
+								);
+							})}
 					</ul>
 					{data.button && (
 						<div
 							className={classNames(
 								styles["more__control"],
-								"d-flex flex-column flex-lg-row align-items-center justify-content-center"
+								"d-flex flex-column flex-lg-row align-items-center justify-content-center w-75 mx-auto",
+								data.controlDirection
 							)}
 						>
 							<button className={classNames(styles["more__btn"], "btn btn-sm text-uppercase rounded-pill text-white ")}>

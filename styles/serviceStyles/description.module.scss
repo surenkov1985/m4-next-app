@@ -154,6 +154,7 @@
                     &-text {
                         list-style: none;
                     }
+
                     &-desc {
                         font-weight: 300;
                         font-size: 20px;
@@ -170,8 +171,9 @@
                             font-weight: 300;
                             line-height: 24px;
                         }
-                        
+
                     }
+
                     &-marker {
                         height: 30px;
                         border-left: 14px solid $ButtonColor;
@@ -183,6 +185,59 @@
                         @media (max-width: 550px) {
                             height: 20px;
                             border-width: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.service-main {
+
+            & .signboards__description-text {
+                margin-top: 30px;
+                    list-style: none;
+
+                    &-list {
+                        margin-top: 40px;
+                    }
+                
+            }
+            & .causes {
+                &__punkt {
+                    &-text {
+                        list-style: none;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;row-gap: 20px;
+                        font-weight: 300;
+                        font-size: 20px;
+                        line-height: 32px;
+                        color: #373737;
+
+                        @media (max-width: 768px) {
+                            font-size: 18px;
+                        }
+
+                        @media (max-width: 550px) {
+                            font-size: 16px;
+                            line-height: 26px;
+                        }
+                    }
+
+                    &-title {
+                        font-weight: 900;
+                        font-size: 32px;
+                        line-height: 32px;
+                        color: #797979;
+
+                        @media (max-width: 768px) {
+                            font-size: 26px;
+                        }
+
+                        @media (max-width: 550px) {
+                            font-size: 20px;
+                            line-height: 26px;
                         }
                     }
                 }

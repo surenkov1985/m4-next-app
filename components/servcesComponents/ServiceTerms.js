@@ -103,9 +103,7 @@ export default function ServiceTerms({ data }) {
 													return (
 														<li key={index} className={classNames(styles["terms__plus-list-item"], "d-flex flex-row align-items-center")}>
 															{item.icon && (
-																// <div className={classNames(styles["terms__plus-list-icon"], "d-flex align-items-center justify-content-center")}>
 																	<Image src={item.icon} alt="icon"/>
-																// </div>
 															)}
 															<span>{item.text}</span>
 														</li>
