@@ -12,10 +12,7 @@ export default function ServiceTerms({ data }) {
 						className={classNames(
 							styles["causes__item"],
 							styles["signboards__description-text-list"],
-							// styles[item.textSize],
 							"d-flex align-items-center w-75"
-							// item.size,
-							// item.direction
 						)}
 					>
 						{data.mark && <div className={classNames(styles["causes__item-num"], "text-right")}>{data.mark}</div>}

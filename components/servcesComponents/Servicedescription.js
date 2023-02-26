@@ -44,9 +44,7 @@ export default function ServiceDescription({ data }) {
 								{data.listTitle}
 							</h3>
 						)}
-						{data.punktsTitle && (
-							<h3 className={classNames(styles["causes__punkt-title"], "text-center w-75 mx-auto ")}>{data.punktsTitle}</h3>
-						)}
+
 						{data.list &&
 							data.list.map((item, index) => {
 								return (
@@ -71,6 +69,9 @@ export default function ServiceDescription({ data }) {
 									</li>
 								);
 							})}
+						{data.punktsTitle && (
+							<h3 className={classNames(styles["causes__punkt-title"], "text-center w-75 mx-auto ")}>{data.punktsTitle}</h3>
+						)}
 						{data.punkts &&
 							data.punkts.map((item, index) => {
 								return (
@@ -85,7 +86,7 @@ export default function ServiceDescription({ data }) {
 											item.direction
 										)}
 									>
-										<ul className={classNames(styles["causes__punkt-list"], "d-flex  pl-3 mx-auto")}>
+										<ul className={classNames(styles["causes__punkt-list"], "d-flex align-items-center mx-auto")}>
 											{item.items.map((item, index) => {
 												return (
 													<li key={index} className={classNames(styles["causes__punkt-text"], item.align)}>
@@ -111,11 +112,14 @@ export default function ServiceDescription({ data }) {
 									</li>
 								);
 							})}
+						{data.subTitle && (
+							<h3 className={classNames(styles["signboards__description-title"], "text-center w-75 mx-auto")}>{data.subTitle}</h3>
+						)}
 						{data.subText &&
 							data.subText.map((item, index) => {
 								return (
 									<li key={index} className={classNames(styles["banners__item"], styles["banner"], "col-12", item.size)}>
-										<p className={styles["signboards__description-text"]}>{item.text}</p>
+										<p className={classNames(styles["signboards__description-text"], "text-center text-lg-left")}>{item.text}</p>
 									</li>
 								);
 							})}

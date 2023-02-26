@@ -132,7 +132,7 @@ export default function ServiceMore({ data }) {
 													item.direction
 												)}
 											>
-												<ul className={classNames(styles["more__plus-list"],  "d-flex mb-0 mx-auto")}>
+												<ul className={classNames(styles["more__plus-list"], "d-flex mb-0 mx-auto")}>
 													{item.items.map((item, index) => {
 														return (
 															<li
@@ -151,9 +151,7 @@ export default function ServiceMore({ data }) {
 																		></div>
 																	)}
 																	{item.title && (
-																		<p className={classNames(styles["more__plus-title"], "my-0")}>
-																			{item.title}
-																		</p>
+																		<p className={classNames(styles["more__plus-title"], "my-0")}>{item.title}</p>
 																	)}
 																	<p className={classNames(styles["causes__punkt-desc"], "font-weight-light mb-0")}>
 																		{item.text}
@@ -166,6 +164,9 @@ export default function ServiceMore({ data }) {
 											</li>
 										);
 									})}
+								{item.subTitle && (
+									<h3 className={classNames(styles["more__title"], "font-weight-bold text-center")}>{item.subTitle}</h3>
+								)}
 								{item.subText &&
 									item?.subText?.map((text, index) => {
 										return (

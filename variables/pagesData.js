@@ -185,6 +185,16 @@ import lampIcon from "../public/images/services/service-main/lamp-icon.svg"
 import filmIcon from "../public/images/services/service-main/film-icon.svg"
 import puzzleIcon from "../public/images/services/service-main/puzzle-icon.svg"
 
+// // Изображения страницы Сервисное обслуживание
+
+import advertionIcon from "../public/images/services/advertion-production/advertion-icon.svg"
+import clockIcon from "../public/images/services/advertion-production/clock-icon.svg"
+import guarantIcon from "../public/images/services/advertion-production/guarant-icon.svg"
+import coinsIcon from "../public/images/services/advertion-production/money-icon.svg"
+import payIcon from "../public/images/services/advertion-production/pay-icon.svg"
+import priceIcon from "../public/images/services/advertion-production/price-icon.svg"
+import documentIcon from "../public/images/services/advertion-production/document-icon.svg"
+
 export const servicePagesData = [
 	{
 		//  Данные страницы Вывески
@@ -2501,6 +2511,107 @@ export const servicePagesData = [
 							icon: puzzleIcon,
 							title: "Вывеска разваливается",
 							text: `Разрушение конструкций происходит по разным причинам. Иногда разрушение вывески — это проявление скрытого производственного брака, иногда разрушение вызвано внешними воздействиями. Выполним работы по ремонту и реставрации: объемных букв, световых коробов и т.д.`,
+						},
+					],
+				},
+			],
+		},
+	},
+	{
+		//  Данные страницы Согласование рекламы
+		id: "advertion-production",
+		sliderTheme: "dark",
+		titleBlock: {
+			title: "Согласование рекламы",
+			text: [
+				`Разрешение на вывеску, как и любого другого объекта рекламы - обязательная процедура. Ни одна фасадная конструкция не может быть использована, пока на её установку не будет получено официальное разрешение. Уже более 6 лет наша компания оказывает услуги по согласованию рекламных конструкций, Мы делаем это быстро, качественно и по самой выгодной цене.`,
+			],
+			icon: advertionIcon,
+		},
+		descriptionBlock: {
+			page: "advertion-production",
+			button: "Оставить заявку",
+			controlDirection: "flex-lg-row",
+			controlText:
+				"Срок выполнения от 3 до 6 рабочих дней.",
+			subTitle: `Выбор материала и технологии изготовления`,
+			subText: [
+				{
+					text: `Офисные и фасадные таблички можно смело назвать «малыми формами» наружной рекламы, что, впрочем, нисколько не умаляет их значения в формировании имиджа компании или предприятия.`,
+					size: "col-lg-12 text-center",
+				},
+				{
+					text: `Стильные, выполненные с хорошим вкусом и с применением качественных материалов таблички формируют у потенциальных партнёров и клиентов благоприятное впечатление об организации. Небрежные или, наоборот, не к месту вычурные - вызывают сомнения и лёгкое недоверие к персоналу и руководству компании. Вопрос доверия обостряется при полном отсутствии вывески, - «анонимный» бизнес всегда подозрителен.`,
+					size: "col-lg-12 text-center",
+				},
+				{
+					text: `Место дислокации офисной таблички определяется прочностью и долговечностью исходного материала, его способностью противостоять агрессивному воздействию окружающей среды. По этим параметрам металлические таблички находятся вне конкуренции, поэтому чаще всего именно их используют на фасадах.`,
+					size: "col-lg-12 text-center",
+				},
+			],
+			punkts: [
+				{
+					size: `col-lg-4`,
+					items: [
+						{
+							icon: clockIcon,
+							align: "align-items-center",
+							title: "Оперативно",
+							text: `Предварительное разрешение всего за 1-2 дня`,
+						},
+					],
+				},
+				
+				{
+					size: `col-lg-4`,
+					items: [
+						{
+							icon: guarantIcon,
+							title: "100% гарантия",
+							text: `Если не сделаем мы, значит это в принципе не возможно`,
+						},
+					],
+				},
+				{
+					size: `col-lg-4`,
+					items: [
+						{
+							icon: coinsIcon,
+							title: "Низкая стоимость",
+							text: `Почему у нас не дорого? Потому что мы занимаемся этим 11 лет`,
+						},
+					],
+				},
+				{
+					size: `col-lg-4`,
+					items: [
+						
+						{
+							icon: payIcon,
+							align: "align-items-center",
+							title: "Оплата только за результат",
+							text: `Мы бесплатно подадим предварительную заявку на согласование, только при положительном результате берем оплату`,
+						},
+					],
+				},
+				{
+					size: `col-lg-4`,
+					items: [
+						{
+							icon: priceIcon,
+							title: "Окончательня стоимость",
+							text: `Мы не разбиваем услугу по частям. Всё под ключ, всё для клиента!`,
+						},
+					],
+				},
+				
+				{
+					size: `col-lg-4`,
+					items: [
+						{
+							icon: documentIcon,
+							title: "Профессионально",
+							text: `Профессиональное составление документов соответствующее всем актуальным требованиям контролирующих органов`,
 						},
 					],
 				},
