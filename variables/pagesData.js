@@ -174,26 +174,26 @@ import decIcon from "../public/images/services/slim-panels/decrement-icon.svg";
 
 // // Изображения страницы Сервисное обслуживание
 
-import serviceMainIcon from "../public/images/services/service-main/service-main-icon.svg"
+import serviceMainIcon from "../public/images/services/service-main/service-main-icon.svg";
 
-import serviceImg1 from "../public/images/services/service-main/service-image-1.png"
-import serviceImg2 from "../public/images/services/service-main/service-image-2.png"
+import serviceImg1 from "../public/images/services/service-main/service-image-1.png";
+import serviceImg2 from "../public/images/services/service-main/service-image-2.png";
 import serviceImg3 from "../public/images/services/service-main/service-image-3.png";
-import serviceImg4 from "../public/images/services/service-main/service-image-4.png"
+import serviceImg4 from "../public/images/services/service-main/service-image-4.png";
 
-import lampIcon from "../public/images/services/service-main/lamp-icon.svg"
-import filmIcon from "../public/images/services/service-main/film-icon.svg"
-import puzzleIcon from "../public/images/services/service-main/puzzle-icon.svg"
+import lampIcon from "../public/images/services/service-main/lamp-icon.svg";
+import filmIcon from "../public/images/services/service-main/film-icon.svg";
+import puzzleIcon from "../public/images/services/service-main/puzzle-icon.svg";
 
 // // Изображения страницы Сервисное обслуживание
 
-import advertionIcon from "../public/images/services/advertion-production/advertion-icon.svg"
-import clockIcon from "../public/images/services/advertion-production/clock-icon.svg"
-import guarantIcon from "../public/images/services/advertion-production/guarant-icon.svg"
-import coinsIcon from "../public/images/services/advertion-production/money-icon.svg"
-import payIcon from "../public/images/services/advertion-production/pay-icon.svg"
-import priceIcon from "../public/images/services/advertion-production/price-icon.svg"
-import documentIcon from "../public/images/services/advertion-production/document-icon.svg"
+import advertionIcon from "../public/images/services/advertion-production/advertion-icon.svg";
+import clockIcon from "../public/images/services/advertion-production/clock-icon.svg";
+import guarantIcon from "../public/images/services/advertion-production/guarant-icon.svg";
+import coinsIcon from "../public/images/services/advertion-production/money-icon.svg";
+import payIcon from "../public/images/services/advertion-production/pay-icon.svg";
+import priceIcon from "../public/images/services/advertion-production/price-icon.svg";
+import documentIcon from "../public/images/services/advertion-production/document-icon.svg";
 
 export const servicePagesData = [
 	{
@@ -2532,8 +2532,7 @@ export const servicePagesData = [
 			page: "advertion-production",
 			button: "Оставить заявку",
 			controlDirection: "flex-lg-row",
-			controlText:
-				"Срок выполнения от 3 до 6 рабочих дней.",
+			controlText: "Срок выполнения от 3 до 6 рабочих дней.",
 			subTitle: `Выбор материала и технологии изготовления`,
 			subText: [
 				{
@@ -2561,7 +2560,7 @@ export const servicePagesData = [
 						},
 					],
 				},
-				
+
 				{
 					size: `col-lg-4`,
 					items: [
@@ -2585,7 +2584,6 @@ export const servicePagesData = [
 				{
 					size: `col-lg-4`,
 					items: [
-						
 						{
 							icon: payIcon,
 							align: "align-items-center",
@@ -2604,7 +2602,7 @@ export const servicePagesData = [
 						},
 					],
 				},
-				
+
 				{
 					size: `col-lg-4`,
 					items: [
