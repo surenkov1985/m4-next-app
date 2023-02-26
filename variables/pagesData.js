@@ -181,7 +181,7 @@ import serviceImg2 from "../public/images/services/service-main/service-image-2.
 import serviceImg3 from "../public/images/services/service-main/service-image-3.png";
 import serviceImg4 from "../public/images/services/service-main/service-image-4.png";
 
-import lampIcon from "../public/images/services/service-main/lamp-icon.svg";
+import lampIcon from "../public/images/services/service-main/lamp-Icon.svg";
 import filmIcon from "../public/images/services/service-main/film-icon.svg";
 import puzzleIcon from "../public/images/services/service-main/puzzle-icon.svg";
 
