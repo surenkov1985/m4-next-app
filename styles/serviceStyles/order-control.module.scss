@@ -1,0 +1,56 @@
+@import "../variables.scss";
+
+.order {
+
+    &.dark {
+        & .order__control-text {
+            color: #FFFFFF;
+        }
+    }
+
+    &.light {
+        & .order__control-text {
+            color: #565656;
+        }
+    }
+    &__control {
+        margin-top: 12px;
+        row-gap: 12px;
+        column-gap: 30px;
+
+        &-text {
+            font-size: 1.125rem;
+
+            @media (max-width: 768px) {
+                font-size: 1rem;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            @media (max-width: 550px) {
+                font-size: 0.875rem;
+            }
+        }
+    }
+
+    &__btn {
+        background: #7A7A7A;
+        font-size: 0.68rem;
+        padding: 9px 38px;
+        min-width: 277px;
+        letter-spacing: 0.08rem;
+
+        @media (max-width: 768px) {
+            min-width: 237;
+        }
+
+        @media (max-width: 550px) {
+            min-width: 197px;
+        }
+
+        &:hover {
+            background: $ButtonColor;
+            border-color: $ButtonColor;
+        }
+    }
+}
