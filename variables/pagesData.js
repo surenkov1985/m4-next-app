@@ -195,6 +195,24 @@ import payIcon from "../public/images/services/advertion-production/pay-icon.svg
 import priceIcon from "../public/images/services/advertion-production/price-icon.svg";
 import documentIcon from "../public/images/services/advertion-production/document-icon.svg";
 
+// // Изображения страницы Бейджи
+
+import badgesIcon from "../public/images/services/badges/badges-icon.svg"
+
+import badgesImg1 from "../public/images/services/badges/badges-image1.png";
+import badgesImg2 from "../public/images/services/badges/badges-image2.png";
+import badgesImg3 from "../public/images/services/badges/badges-image3.png";
+import badgesImg4 from "../public/images/services/badges/badges-image4.png";
+
+import whiteClock from "../public/images/services/badges/white-clock.svg";
+import whiteHand from "../public/images/services/badges/white-hand.svg";
+import whiteCristall from "../public/images/services/badges/white-cristall.svg";
+import whiteMoney from "../public/images/services/badges/white-money.svg";
+import whiteColor from "../public/images/services/badges/white-color.svg";
+import whiteScheme from "../public/images/services/badges/white-scheme.svg";
+
+import viewIcon from "../public/images/services/badges/view-icon.svg";
+
 export const servicePagesData = [
 	{
 		//  Данные страницы Вывески
@@ -2550,7 +2568,7 @@ export const servicePagesData = [
 			],
 			punkts: [
 				{
-					size: `col-lg-4`,
+					size: `col-md-6 col-lg-4`,
 					items: [
 						{
 							icon: clockIcon,
@@ -2562,7 +2580,7 @@ export const servicePagesData = [
 				},
 
 				{
-					size: `col-lg-4`,
+					size: `col-md-6 col-lg-4`,
 					items: [
 						{
 							icon: guarantIcon,
@@ -2572,7 +2590,7 @@ export const servicePagesData = [
 					],
 				},
 				{
-					size: `col-lg-4`,
+					size: `col-md-6 col-lg-4`,
 					items: [
 						{
 							icon: coinsIcon,
@@ -2582,7 +2600,7 @@ export const servicePagesData = [
 					],
 				},
 				{
-					size: `col-lg-4`,
+					size: `col-md-6 col-lg-4`,
 					items: [
 						{
 							icon: payIcon,
@@ -2593,7 +2611,7 @@ export const servicePagesData = [
 					],
 				},
 				{
-					size: `col-lg-4`,
+					size: `col-md-6 col-lg-4`,
 					items: [
 						{
 							icon: priceIcon,
@@ -2604,13 +2622,148 @@ export const servicePagesData = [
 				},
 
 				{
-					size: `col-lg-4`,
+					size: `col-md-6 col-lg-4`,
 					items: [
 						{
 							icon: documentIcon,
 							title: "Профессионально",
 							text: `Профессиональное составление документов соответствующее всем актуальным требованиям контролирующих органов`,
 						},
+					],
+				},
+			],
+		},
+	},
+	{
+		//  Данные страницы Бейджи
+		id: "badges",
+		sliderTheme: "dark",
+		titleBlock: {
+			title: "Бейджи",
+			text: [
+				`В современной корпоративной культуре бейджи – больше, чем простые носители информации о сотруднике. Это часть имиджа компании, помогающая преодолевать проблемы коммуникации. Ни одна конференция, выставка, симпозиум не обходится без такой мелочи, как бейдж. Его массово используют сотрудники сферы обслуживания: для менеджеров в банке, горничных, продавцов, официантов бейдж – обязательный элемент униформы.`,
+			],
+			icon: badgesIcon,
+		},
+		descriptionBlock: {
+			page: "badges",
+			gallery: [badgesImg1, badgesImg2, badgesImg3, badgesImg4],
+			title: "Для чего нужы бейджи",
+			text: [
+				{
+					text: `Бейджи применяются во всех сферах деятельности. Металлический или пластиковый бейдж является обязательным атрибутом любых учреждений, офисов, мероприятий, конференций, он, как носитель имиджевой и справочной информации незаменим.  Бейджи занимают особое место в корпоративном имидже сотрудника и, по сути, являются визитной карточкой организации, которая подчеркнет неповторимый стиль и культуру предприятия, а также будет способствовать поддержанию ощущения сплоченности среди коллектива. Бейджи могут иметь самую разнообразную конфигурацию, что даст возможность реализовать любые дизайнерские решения.`,
+					size: "col-lg-12 text-center text-lg-left",
+				},
+				{
+					text: `Наша Компания готова удовлетворить Ваш спрос на изготовление металлических и пластиковых бейджей! Предоставляем свои услуги по изготовлению бейджей на заказ. Бейджи на выбор: с окном или без окна, на пластике, металле, дереве. Крепление: магнит, булавка, клипса. Нанесение изображения на бейдж осуществляется методом лазерной гравировки, термопечати или уф печати. Быстрое и качественное изготовление бейджиков.`,
+					size: "col-lg-12 text-center text-lg-left",
+				},
+			],
+		},
+		moreBlock: {
+			theme: "dark",
+			page: "badges",
+			icon: null,
+			title: `Наши бейджи`,
+			description: [
+				{
+					punkts: [
+						{
+							size: `col-2`,
+							direction: "flex-row justify-content-between align-items-start",
+							items: [
+								{
+									icon: whiteClock,
+									title: "ИМЕЮТ ДЛИТЕЛЬНЫЙ СРОК ЭКСПЛУАТАЦИИ",
+									size: `col-2`,
+								},
+								{
+									icon: whiteHand,
+									title: "ИЗГОТАВЛИВАЮТСЯ ИЗ КАЧЕСТВЕННЫХ МАТЕРИАЛОВ",
+									size: `col-2`,
+								},
+								{
+									icon: whiteCristall,
+									title: "ИМЕЮТ УНИКАЛЬНЫЙ ДИЗАЙН",
+									size: `col-2`,
+								},
+								{
+									icon: whiteMoney,
+									title: "ИМЕЮТ НИЗКУЮ СТОИМОСТЬ",
+									size: `col-2`,
+								},
+								{
+									icon: whiteColor,
+									title: "ИМЕЮТ ТОЧНУЮ ЦВЕТОПЕРЕДАЧУ",
+									size: `col-2`,
+								},
+								{
+									icon: whiteScheme,
+									title: "ПРОИЗВОДЯТСЯ НА СОВРЕМЕННОМ ОБОРУДОВАНИИ",
+									size: `col-2`,
+								},
+							],
+						},
+					],
+					colSize: "col-12",
+				},
+			],
+		},
+		termsBlock: {
+			theme: "light",
+			page: "badges",
+			icon: null,
+			button: "Оставить заявку",
+			controlText: "Срок выполнения от 5 до 10 рабочих дней.",
+			description: [
+				{
+					colSize: "col-xl-7",
+					cards: {
+						buttonIcon: viewIcon,
+						list: [
+							{
+								direction: "align-items-center align-items-md-end justify-content-start",
+								buttonIcon: viewIcon,
+								items: [
+									{
+										sizeX: 75,
+										sizeY: 50,
+										windowSizeX: 60,
+										windowSizeY: 12,
+									},
+									{
+										sizeX: 65,
+										sizeY: 35,
+										windowSizeX: 55,
+										windowSizeY: 12,
+									},
+								],
+							},
+							{
+								direction: "align-items-center align-items-md-start justify-content-end",
+								items: [
+									{
+										sizeX: 70,
+										sizeY: 40,
+										windowSizeX: 60,
+										windowSizeY: 12,
+									},
+									{
+										sizeX: 75,
+										sizeY: 50,
+										windowSizeX: 64,
+										windowSizeY: 20,
+									},
+								],
+							},
+						],
+					},
+				},
+				{
+					colSize: "col-xl-5",
+					title: "Распространенные размеры бейджей с окошком",
+					text: [
+						`Данные стандартные размеры бейджа одни из самых распространенных в мире. Стандартная форма бейджа подходит как для изготовления бейджа на пластике, металле или дереве. Бейджи не стандартной формы изготавливаются по требованию заказчика.`,
 					],
 				},
 			],

@@ -132,7 +132,7 @@ export default function ServiceMore({ data }) {
 													item.direction
 												)}
 											>
-												<ul className={classNames(styles["more__plus-list"], "d-flex mb-0 mx-auto")}>
+												<ul className={classNames(styles["more__plus-list"], item.direction, "d-flex mb-0 mx-auto")}>
 													{item.items.map((item, index) => {
 														return (
 															<li

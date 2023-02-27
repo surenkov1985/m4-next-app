@@ -98,22 +98,30 @@ export default function ServiceTerms({ data }) {
 											<ul className={classNames(styles["terms__plus-list"], "d-flex mx-auto")}>
 												{item.list.items.map((item, index) => {
 													return (
-														<li key={index} className={classNames(styles["terms__plus-list-item"], "d-flex flex-row align-items-center")}>
-															{item.icon && (
-																	<Image src={item.icon} alt="icon"/>
+														<li
+															key={index}
+															className={classNames(
+																styles["terms__plus-list-item"],
+																"d-flex flex-row align-items-center"
 															)}
+														>
+															{item.icon && <Image src={item.icon} alt="icon" />}
 															<span>{item.text}</span>
 														</li>
 													);
 												})}
 											</ul>
 										)}
-										{item.list.text && <li className={classNames(styles["terms__plus-list"], "d-flex align-items-center")}>
-											{item.list.icon && <span>
-													<Image src={item.list.icon}/>
-												</span>}
-											<span>{item.list.text}</span>
-											</li>}
+										{item.list.text && (
+											<li className={classNames(styles["terms__plus-list"], "d-flex align-items-center")}>
+												{item.list.icon && (
+													<span>
+														<Image src={item.list.icon} />
+													</span>
+												)}
+												<span>{item.list.text}</span>
+											</li>
+										)}
 									</>
 								)}
 								{item.button && (
@@ -130,6 +138,65 @@ export default function ServiceTerms({ data }) {
 										{item.controlText && (
 											<p className={classNames(styles["terms__control-text"], "text-center my-0")}>{item.controlText}</p>
 										)}
+									</div>
+								)}
+								{item.cards && (
+									<div className={classNames(styles["terms__cards"], "d-flex align-items-start")}>
+										<div className={classNames(styles["terms__cards-list"], "d-flex flex-column")}>
+											{item.cards.list.map((list, index) => {
+												return (
+													<ul
+														key={index}
+														className={classNames(
+															styles["terms__cards-item"],
+															"d-flex flex-column flex-md-row mb-0",
+															list.direction
+														)}
+													>
+														{list.items.map((item, index) => {
+															return (
+																<li
+																	key={index}
+																	style={{ width: `${3.4 * item.sizeX}px`, height: `${3.4 * item.sizeY}px` }}
+																	className={classNames(styles["terms__card"])}
+																>
+																	<div
+																		className={classNames(
+																			styles["terms__card-bg"],
+																			"d-flex flex-column justify-content-end p-3"
+																		)}
+																	>
+																		<div
+																			className={classNames(
+																				styles["terms__card-text"],
+																				"d-flex align-items-center justify-content-center w-100 h-100"
+																			)}
+																		>
+																			<p>{`${item.sizeX}x${item.sizeY}мм`}</p>
+																		</div>
+																		<div
+																			className={classNames(
+																				styles["terms__card-cell"],
+																				"d-flex align-items-center justify-content-center w-100 h-100"
+																			)}
+																			style={{
+																				width: `${3.4 * item.windowSizeX}px`,
+																				height: `${3.4 * item.windowSizeY}px`,
+																			}}
+																		>
+																			<p className="mb-0">{`${item.windowSizeX}x${item.windowSizeY}мм`}</p>
+																		</div>
+																	</div>
+																</li>
+															);
+														})}
+													</ul>
+												);
+											})}
+										</div>
+										<button className={classNames(styles["terms__cards-button"])}>
+											<Image src={item.cards.buttonIcon} />
+										</button>
 									</div>
 								)}
 							</div>

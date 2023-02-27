@@ -14,9 +14,15 @@
                 color: #FFFFFF;
             }
 
-            &__plus {
+            &__plus {}
 
+            &__title {
+                color: #FFFFFF;
             }
+        }
+
+        & .more__title {
+            color: #FFFFFF;
         }
     }
 
@@ -130,6 +136,7 @@
             &__col {
                 padding: 0;
             }
+
             &__title {
                 font-weight: 300;
                 font-size: 44px;
@@ -150,7 +157,7 @@
 
             &__plus {
                 &-list {
-                    list-style: none ;
+                    list-style: none;
                     column-gap: 20px;
                     // padding: 0 10px;
                     font-size: 1.25rem;
@@ -186,6 +193,75 @@
                     }
                 }
             }
+        }
+    }
+
+    &.badges {
+        & .more__title {
+            font-weight: 500;
+            font-size: 3rem;
+            line-height: 58px;
+            
+
+            @media (max-width: 768px) {
+                font-size: 2rem;
+                line-height: 30px;
+            }
+
+            @media (max-width: 550px) {
+                font-size: 1.625rem;
+                line-height: 26px;
+            }
+
+            &::after {
+                content: none;
+            }
+        }
+
+        & .more__plus-list {
+            margin-top: 0;
+            row-gap: 20px;
+            column-gap: 20px;
+            width: 100%;
+
+            & > .col-2 {
+                width: calc(100% / 6 - 20px);
+
+                @media (max-width: 1200px) {
+                    max-width: calc(100% / 3);
+                }
+
+                @media (max-width: 768px) {
+                    max-width: calc(100% / 2);
+                }
+            }
+        }
+
+        & .more__col {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        & .causes__punkt-text {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+
+            & img {
+                margin-right: 0!important;
+            }
+        }
+
+        & .more__plus-title {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+        }
+
+        & .more__row {
+            margin-top: 40px;
+            width: 100%;
         }
     }
 
@@ -428,7 +504,7 @@
             }
         }
     }
-    
+
 
     & .col-12 {
         width: 100%;
